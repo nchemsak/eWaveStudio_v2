@@ -1,0 +1,19 @@
+body {
+  background-color: black; }
+
+.navbar {
+  background-color: black;
+  border: none; }
+
+.pad {
+  width: 25px;
+  height: 25px;
+  margin-bottom: 2px;
+  display: inline-block;
+  background: #DADADA;
+  margin-right: 1px;
+  cursor: pointer;
+  border: 1px solid white;
+  border-radius: 3px; }
+
+/*# sourceMappingURL=styles.css.map */
