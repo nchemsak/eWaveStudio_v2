@@ -22,4 +22,8 @@ body {
     .pad:hover:before, .pad:hover:after {
       transition: all .25s linear; }
 
+li.dropdown {
+  list-style: none;
+  display: inline; }
+
 /*# sourceMappingURL=styles.css.map */
