@@ -1,6 +1,6 @@
 .DS_Store
 lib/.sass-cache
-css/main.css.map
+css/styles.css.map
 lib/bower_components
 lib/node_modules
 

@@ -1,5 +1,5 @@
 body {
-  background-color: black; }
+  background-color: #f2f2f2; }
 
 .navbar {
   background-color: black;
@@ -13,7 +13,13 @@ body {
   background: #DADADA;
   margin-right: 1px;
   cursor: pointer;
-  border: 1px solid white;
-  border-radius: 3px; }
+  border-radius: 3px;
+  color: #575757; }
+  .pad:hover {
+    background: #ff6e42;
+    color: #fffcfb;
+    transition: all .05s linear; }
+    .pad:hover:before, .pad:hover:after {
+      transition: all .25s linear; }
 
 /*# sourceMappingURL=styles.css.map */
