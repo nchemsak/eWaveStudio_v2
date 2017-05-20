@@ -13,7 +13,7 @@
     margin-bottom: 2px;
     display: inline-block;
     background: #DADADA;
-    margin-right: 1px;
+    margin-right: 8px;
     cursor: pointer;
     border-radius: 3px;
     color: #575757;
@@ -32,4 +32,8 @@
   li.dropdown {
     list-style: none;
     display: inline;
+  }
+
+  svg {
+    margin-right: 10px;
   }
