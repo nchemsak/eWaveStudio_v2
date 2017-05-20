@@ -11,7 +11,7 @@ body {
   margin-bottom: 2px;
   display: inline-block;
   background: #DADADA;
-  margin-right: 8px;
+  margin-left: 8px;
   cursor: pointer;
   border-radius: 3px;
   color: #575757; }
@@ -28,5 +28,14 @@ li.dropdown {
 
 svg {
   margin-right: 10px; }
+
+#sequencer {
+  margin-left: 10px; }
+
+input.form-control {
+  background-color: transparent;
+  display: inline;
+  width: 100px;
+  border: none; }
 
 /*# sourceMappingURL=styles.css.map */

@@ -1,39 +1,50 @@
-  body {
-    background-color: #f2f2f2;
-  }
+body {
+  background-color: #f2f2f2;
+}
 
-  .navbar {
-    background-color: black;
-    border: none;
-  }
+.navbar {
+  background-color: black;
+  border: none;
+}
 
-  .pad {
-    width: 25px;
-    height: 25px;
-    margin-bottom: 2px;
-    display: inline-block;
-    background: #DADADA;
-    margin-right: 8px;
-    cursor: pointer;
-    border-radius: 3px;
-    color: #575757;
-    &:hover {
-      background: #ff6e42;
-      color: #fffcfb;
-      transition: all .05s linear;
-      // box-shadow: -2em 2em 0 #e1e1e1;
-      &:before,
-      &:after {
-        transition: all .25s linear;
-      }
+.pad {
+  width: 25px;
+  height: 25px;
+  margin-bottom: 2px;
+  display: inline-block;
+  background: #DADADA;
+  margin-left: 8px;
+  cursor: pointer;
+  border-radius: 3px;
+  color: #575757;
+  &:hover {
+    background: #ff6e42;
+    color: #fffcfb;
+    transition: all .05s linear;
+    // box-shadow: -2em 2em 0 #e1e1e1;
+    &:before,
+    &:after {
+      transition: all .25s linear;
     }
   }
+}
 
-  li.dropdown {
-    list-style: none;
-    display: inline;
-  }
+li.dropdown {
+  list-style: none;
+  display: inline;
+}
 
-  svg {
-    margin-right: 10px;
-  }
+svg {
+  margin-right: 10px;
+}
+
+#sequencer {
+  margin-left: 10px;
+}
+
+input.form-control {
+  background-color: transparent;
+  display: inline;
+  width: 100px;
+  border: none;
+}
