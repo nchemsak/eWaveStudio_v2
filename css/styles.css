@@ -6,8 +6,8 @@ body {
   border: none; }
 
 .pad {
-  width: 25px;
-  height: 25px;
+  width: 35px;
+  height: 35px;
   margin-bottom: 2px;
   display: inline-block;
   background: #DADADA;
@@ -30,12 +30,11 @@ svg {
   margin-right: 10px; }
 
 #sequencer {
-  margin-left: 10px; }
+  margin-left: 50px; }
 
 input.form-control {
   background-color: transparent;
   display: inline;
-  width: 100px;
-  border: none; }
+  width: 100px; }
 
 /*# sourceMappingURL=styles.css.map */
