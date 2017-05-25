@@ -9,11 +9,6 @@ Tags: Web Audio
 body {
   background-color: #f2f2f2; }
 
-#sequencer {
-  margin-left: 50px;
-  display: flex;
-  align-items: center; }
-
 a.dropdown-toggle {
   text-decoration: none; }
 
@@ -27,6 +22,8 @@ a.dropdown-toggle {
 .pad {
   min-width: 35px;
   min-height: 35px;
+  max-width: 35px;
+  max-height: 35px;
   margin-bottom: 2px;
   display: inline-block;
   background: #DADADA;

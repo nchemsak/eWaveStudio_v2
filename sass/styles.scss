@@ -32,12 +32,15 @@ $color-text: #fffcfb;
 body {
     background-color: $color-background;
 }
+// .row {
+//     display: block;
+// }
 
-#sequencer {
-    margin-left: 50px;
-    display: flex;
-    align-items: center;
-}
+// #sequencer {
+//     margin-left: 50px;
+//     display: flex;
+//     // align-items: center;
+// }
 
 
 a.dropdown-toggle {
@@ -56,6 +59,8 @@ a.dropdown-toggle {
 .pad {
     min-width: 35px;
     min-height: 35px;
+    max-width: 35px;
+    max-height: 35px;
     margin-bottom: 2px;
     display: inline-block;
     background: $color-pad;
