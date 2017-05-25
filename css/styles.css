@@ -9,13 +9,24 @@ Tags: Web Audio
 body {
   background-color: #f2f2f2; }
 
+#sequencer {
+  margin-left: 50px;
+  display: flex;
+  align-items: center; }
+
+a.dropdown-toggle {
+  text-decoration: none; }
+
 .navbar {
   background-color: black;
   border: none; }
 
+.fx {
+  width: 20px; }
+
 .pad {
-  width: 35px;
-  height: 35px;
+  min-width: 35px;
+  min-height: 35px;
   margin-bottom: 2px;
   display: inline-block;
   background: #DADADA;
@@ -24,6 +35,7 @@ body {
   border-radius: 3px; }
   .pad:hover {
     background: #ff6e42;
+    color: #fffcfb;
     transition: all .05s linear; }
     .pad:hover:before, .pad:hover:after {
       transition: all .25s linear; }
@@ -38,15 +50,10 @@ li {
 svg {
   margin-right: 10px; }
 
-#sequencer {
-  margin-left: 50px; }
-
 input.form-control {
   background-color: transparent;
   display: inline-block;
-  width: 100px;
-  vertical-align: middle;
-  line-height: normal; }
+  width: 100px; }
 
 ul.dropdown-menu {
   box-shadow: none;

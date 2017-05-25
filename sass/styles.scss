@@ -33,14 +33,29 @@ body {
     background-color: $color-background;
 }
 
+#sequencer {
+    margin-left: 50px;
+    display: flex;
+    align-items: center;
+}
+
+
+a.dropdown-toggle {
+    text-decoration: none;
+}
+
 .navbar {
     background-color: $color-navbar;
     border: none;
 }
 
+.fx {
+    width: 20px;
+}
+
 .pad {
-    width: 35px;
-    height: 35px;
+    min-width: 35px;
+    min-height: 35px;
     margin-bottom: 2px;
     display: inline-block;
     background: $color-pad;
@@ -49,7 +64,7 @@ body {
     border-radius: 3px;
     &:hover {
         background: $color-hover;
-        // color: #fffcfb;
+        color: #fffcfb;
         transition: all .05s linear;
         // box-shadow: -2em 2em 0 #e1e1e1;
         &:before,
@@ -72,17 +87,12 @@ svg {
     margin-right: 10px;
 }
 
-#sequencer {
-    margin-left: 50px;
-}
 
 // here it is
 input.form-control {
     background-color: transparent;
     display: inline-block;
     width: 100px;
-    vertical-align: middle;
-    line-height: normal;
 }
 
 ul.dropdown-menu {
