@@ -9,6 +9,12 @@ Tags: Web Audio
 body {
   background-color: #f2f2f2; }
 
+.row {
+  display: block; }
+
+#sequencer {
+  margin-left: 50px; }
+
 a.dropdown-toggle {
   text-decoration: none; }
 

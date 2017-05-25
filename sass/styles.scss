@@ -32,15 +32,15 @@ $color-text: #fffcfb;
 body {
     background-color: $color-background;
 }
-// .row {
-//     display: block;
-// }
+.row {
+    display: block;
+}
 
-// #sequencer {
-//     margin-left: 50px;
-//     display: flex;
-//     // align-items: center;
-// }
+#sequencer {
+    margin-left: 50px;
+    // display: inline-flex;
+    // align-items: center;
+}
 
 
 a.dropdown-toggle {
@@ -113,3 +113,4 @@ ul.dropdown-menu {
 .dropdown-menu .divider {
     background-color: black;
 }
+
