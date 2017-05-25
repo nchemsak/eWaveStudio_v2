@@ -42,9 +42,26 @@ svg {
   margin-left: 50px;
 }
 
+// here it is
+
 input.form-control {
   background-color: transparent;
-  display: inline;
+  display: inline-block;
   width: 100px;
+  vertical-align: middle;
+  line-height: normal;
 }
 
+ul.dropdown-menu {
+  box-shadow: none;
+  border: 3px solid black;
+  min-width: 200px;
+}
+
+.dropdown-menu>li>a:hover {
+  background-color: #ff6e42;
+}
+
+.dropdown-menu .divider {
+  background-color: black;
+}
