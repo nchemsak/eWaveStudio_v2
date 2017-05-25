@@ -1,71 +1,100 @@
+/*
+
+Author: Nick Chemsak
+Description: This is a Web Audio API app built by Nick Chemsak in 2017.
+Version: 2.0
+License: MIT License
+Tags: Web Audio
+*/
+
+// *********************************FONTS************************************
+// $font-stack: Roboto, sans-serif;
+// $h2: 22px;
+// $h3: 21px;
+// $h1: 36px;
+// $defaultfont: 18px;
+// $lgcontentfont: 20px;
+// $sidenavfont-lg: 18px;
+// $topbarfont: 16px;
+// ***************************************************************************
+// *********************************COLORS************************************
+$color-background: #f2f2f2;
+$color-navbar: black;
+$color-pad: #DADADA;
+$color-hover: #ff6e42;
+$color-text: #fffcfb;
+// ***************************************************************************
+// *********************************DIMENSIONS********************************
+// $home-banner-height-lg:672px;
+// $nav-height-lg:200px;
+// //$home-container2-height-lg:350px;
+// ***************************************************************************
 body {
-  background-color: #f2f2f2;
+    background-color: $color-background;
 }
 
 .navbar {
-  background-color: black;
-  border: none;
+    background-color: $color-navbar;
+    border: none;
 }
 
 .pad {
-  width: 35px;
-  height: 35px;
-  margin-bottom: 2px;
-  display: inline-block;
-  background: #DADADA;
-  margin-left: 8px;
-  cursor: pointer;
-  border-radius: 3px;
-  color: #575757;
-  &:hover {
-    background: #ff6e42;
-    color: #fffcfb;
-    transition: all .05s linear;
-    // box-shadow: -2em 2em 0 #e1e1e1;
-    &:before,
-    &:after {
-      transition: all .25s linear;
+    width: 35px;
+    height: 35px;
+    margin-bottom: 2px;
+    display: inline-block;
+    background: $color-pad;
+    margin-left: 8px;
+    cursor: pointer;
+    border-radius: 3px;
+    &:hover {
+        background: $color-hover;
+        // color: #fffcfb;
+        transition: all .05s linear;
+        // box-shadow: -2em 2em 0 #e1e1e1;
+        &:before,
+        &:after {
+            transition: all .25s linear;
+        }
     }
-  }
 }
 
 li.dropdown {
-  list-style: none;
-  display: inline;
+    list-style: none;
+    display: inline;
 }
 
 li {
-  list-style: none;
+    list-style: none;
 }
 
 svg {
-  margin-right: 10px;
+    margin-right: 10px;
 }
 
 #sequencer {
-  margin-left: 50px;
+    margin-left: 50px;
 }
 
 // here it is
-
 input.form-control {
-  background-color: transparent;
-  display: inline-block;
-  width: 100px;
-  vertical-align: middle;
-  line-height: normal;
+    background-color: transparent;
+    display: inline-block;
+    width: 100px;
+    vertical-align: middle;
+    line-height: normal;
 }
 
 ul.dropdown-menu {
-  box-shadow: none;
-  border: 3px solid black;
-  min-width: 200px;
+    box-shadow: none;
+    border: 3px solid black;
+    min-width: 200px;
 }
 
 .dropdown-menu>li>a:hover {
-  background-color: #ff6e42;
+    background-color: #ff6e42;
 }
 
 .dropdown-menu .divider {
-  background-color: black;
+    background-color: black;
 }
