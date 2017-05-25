@@ -26,6 +26,9 @@ li.dropdown {
   list-style: none;
   display: inline; }
 
+li {
+  list-style: none; }
+
 svg {
   margin-right: 10px; }
 
