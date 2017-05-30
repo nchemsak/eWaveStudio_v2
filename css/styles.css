@@ -16,7 +16,8 @@ body {
   margin-left: 50px; }
 
 a.dropdown-toggle {
-  text-decoration: none; }
+  text-decoration: none;
+  cursor: pointer; }
 
 .navbar {
   background-color: black;
@@ -68,5 +69,14 @@ ul.dropdown-menu {
 
 .dropdown-menu .divider {
   background-color: black; }
+
+.dropdown-menu > li > a {
+  cursor: pointer; }
+
+.addChannel {
+  cursor: pointer; }
+
+.checkbox input[type=checkbox] {
+  cursor: pointer; }
 
 /*# sourceMappingURL=styles.css.map */

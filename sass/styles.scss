@@ -8,14 +8,15 @@ Tags: Web Audio
 */
 
 // *********************************FONTS************************************
-// $font-stack: Roboto, sans-serif;
-// $h2: 22px;
-// $h3: 21px;
-// $h1: 36px;
-// $defaultfont: 18px;
-// $lgcontentfont: 20px;
-// $sidenavfont-lg: 18px;
-// $topbarfont: 16px;
+$font-stack: Roboto,
+sans-serif;
+$h2: 22px;
+$h3: 21px;
+$h1: 36px;
+$defaultfont: 18px;
+$lgcontentfont: 20px;
+$sidenavfont-lg: 18px;
+$topbarfont: 16px;
 // ***************************************************************************
 // *********************************COLORS************************************
 $color-background: #f2f2f2;
@@ -30,87 +31,98 @@ $color-text: #fffcfb;
 // //$home-container2-height-lg:350px;
 // ***************************************************************************
 body {
-    background-color: $color-background;
+  background-color: $color-background;
 }
+
 .row {
-    display: block;
+  display: block;
 }
 
 #sequencer {
-    margin-left: 50px;
-    // display: inline-flex;
-    // align-items: center;
+  margin-left: 50px;
+  // display: inline-flex;
+  // align-items: center;
 }
 
-
 a.dropdown-toggle {
-    text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .navbar {
-    background-color: $color-navbar;
-    border: none;
+  background-color: $color-navbar;
+  border: none;
 }
 
 .fx {
-    width: 20px;
+  width: 20px;
 }
 
 .pad {
-    min-width: 35px;
-    min-height: 35px;
-    max-width: 35px;
-    max-height: 35px;
-    margin-bottom: 2px;
-    display: inline-block;
-    background: $color-pad;
-    margin-left: 8px;
-    cursor: pointer;
-    border-radius: 3px;
-    &:hover {
-        background: $color-hover;
-        color: #fffcfb;
-        transition: all .05s linear;
-        // box-shadow: -2em 2em 0 #e1e1e1;
-        &:before,
-        &:after {
-            transition: all .25s linear;
-        }
+  min-width: 35px;
+  min-height: 35px;
+  max-width: 35px;
+  max-height: 35px;
+  margin-bottom: 2px;
+  display: inline-block;
+  background: $color-pad;
+  margin-left: 8px;
+  cursor: pointer;
+  border-radius: 3px;
+  &:hover {
+    background: $color-hover;
+    color: #fffcfb;
+    transition: all .05s linear;
+    // box-shadow: -2em 2em 0 #e1e1e1;
+    &:before,
+    &:after {
+      transition: all .25s linear;
     }
+  }
 }
 
 li.dropdown {
-    list-style: none;
-    display: inline;
+  list-style: none;
+  display: inline;
 }
 
 li {
-    list-style: none;
+  list-style: none;
 }
 
 svg {
-    margin-right: 10px;
+  margin-right: 10px;
 }
-
 
 // here it is
 input.form-control {
-    background-color: transparent;
-    display: inline-block;
-    width: 100px;
+  background-color: transparent;
+  display: inline-block;
+  width: 100px;
 }
 
 ul.dropdown-menu {
-    box-shadow: none;
-    border: 3px solid black;
-    min-width: 200px;
+  box-shadow: none;
+  border: 3px solid black;
+  min-width: 200px;
 }
 
 .dropdown-menu>li>a:hover {
-    background-color: #ff6e42;
+  background-color: #ff6e42;
 }
 
 .dropdown-menu .divider {
-    background-color: black;
+  background-color: black;
 }
 
+.dropdown-menu>li>a {
+  cursor: pointer;
+}
+
+.addChannel {
+  cursor: pointer;
+}
+
+.checkbox input[type=checkbox] {
+  cursor: pointer;
+}

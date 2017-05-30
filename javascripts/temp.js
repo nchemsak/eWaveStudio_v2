@@ -1,13 +1,5 @@
 "use strict";
 
-
-  $(document).ready(function(){
-    // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
-    $('.modal').modal();
-  });
-
-
-
 $(".addChannel").click(function() {
     $("#sequencer").append(
         `<div class="row" data-instrument="hihat">
@@ -55,7 +47,7 @@ $(".addChannel").click(function() {
                 <li role="separator" class="divider"></li>
                 <li><a href="#">Settings</a></li>
                 <li role="separator" class="divider"></li>
-                <li><a href="#">Delete Channel</a></li>
+                <li><a data-href="/delete.php?id=54" data-toggle="modal" data-target="#confirm-delete">Delete Channel</a></li>
 
 
 
@@ -82,7 +74,49 @@ $(".addChannel").click(function() {
         <div class="pad column_13"></div>
         <div class="pad column_14"></div>
         <div class="pad column_15"></div>
-    </div>`);
+
+
+
+    <div class="modal fade" id="confirm-delete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="myModalLabel">Confirm Delete</h4>
+                </div>
+
+                <div class="modal-body">
+                    <p>You are about to delete one track, this procedure is irreversible.</p>
+                    <p>Do you want to proceed?</p>
+                    <p class="debug-url"></p>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                    <a class="btn btn-danger btn-ok">Delete</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+    <script>
+        $('#confirm-delete').on('show.bs.modal', function(e) {
+            $(this).find('.btn-ok').attr('href', $(e.relatedTarget).data('href'));
+
+            $('.debug-url').html('Delete URL: <strong>' + $(this).find('.btn-ok').attr('href') + '</strong>');
+        });
+    </script>
+
+
+    `);
 });
+
+
+
+
+
 
 
