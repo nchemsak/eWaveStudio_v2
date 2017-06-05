@@ -1,13 +1,5 @@
 "use strict";
 
-
-  $(document).ready(function(){
-    // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
-    $('.modal').modal();
-  });
-
-
-
 $(".addChannel").click(function() {
     $("#sequencer").append(
         `<div class="row" data-instrument="hihat">
@@ -56,11 +48,6 @@ $(".addChannel").click(function() {
                 <li><a href="#">Settings</a></li>
                 <li role="separator" class="divider"></li>
                 <li><a href="#">Delete Channel</a></li>
-
-
-
-
-
             </ul>
         </li>
         <span class="instrument-label">
@@ -84,5 +71,3 @@ $(".addChannel").click(function() {
         <div class="pad column_15"></div>
     </div>`);
 });
-
-
