@@ -43,7 +43,8 @@ $(".addChannel").click(function() {
                 </svg>
             </a>
             <ul class="dropdown-menu">
-                <li><a href="#">Load Sample...</a></li>
+                <li><input id="load" name="load" type="file" accept="audio/*"><label for="load">Load Sample...</label></li>
+                <li><a href="#">Select Sample...</a></li>
                 <li role="separator" class="divider"></li>
                 <li><a href="#">Settings</a></li>
                 <li role="separator" class="divider"></li>
