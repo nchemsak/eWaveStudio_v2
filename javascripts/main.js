@@ -51,9 +51,7 @@ $(".addChannel").click(function() {
                 <li><a href="#">Delete Channel</a></li>
             </ul>
         </li>
-        <span class="instrument-label">
-            <strong><input type="text" class="form-control" id="" /></strong>
-        </span>
+
         <div class="pad column_0"></div>
         <div class="pad column_1"></div>
         <div class="pad column_2"></div>

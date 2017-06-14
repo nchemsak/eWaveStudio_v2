@@ -1,13 +1,27 @@
 /*
-Author: Nick Chemsak
+Author: Nick Chemsak 2017
 Description: This is a Web Audio API app built by Nick Chemsak in 2017.
 Version: 2.0
 License: MIT License
 Tags: Web Audio
+
+TABLE OF CONTENTS:
+1. General Definitions
+    1.1 Fonts
+    1.2 Colors
+    1.3 Dimensions
+2. Page Specific Definitions
+    2.1 Body
+    2.2 Header
+    2.3 Footer
+3. Media Queries
 */
 
-// *********************************FONTS************************************
-$font-stack: Roboto, sans-serif;
+// ***************************************************************************
+// 1.1                              FONTS
+// ***************************************************************************
+$font-stack: Roboto,
+sans-serif;
 $h2: 22px;
 $h3: 21px;
 $h1: 36px;
@@ -16,17 +30,21 @@ $lgcontentfont: 20px;
 $sidenavfont-lg: 18px;
 $topbarfont: 16px;
 // ***************************************************************************
-// *********************************COLORS************************************
+// 1.2                              COLORS
+// ***************************************************************************
 $color-background: #f2f2f2;
 $color-navbar: black;
 $color-pad: #DADADA;
 $color-hover: #ff6e42;
 $color-text: #fffcfb;
 // ***************************************************************************
-// *********************************DIMENSIONS********************************
+// 1.3                              DIMENSIONS
+// ***************************************************************************
 // $home-banner-height-lg:672px;
 // $nav-height-lg:200px;
 // //$home-container2-height-lg:350px;
+// ***************************************************************************
+// 2.1                              BODY
 // ***************************************************************************
 body {
     background-color: $color-background;
@@ -172,5 +190,4 @@ ul.dropdown-menu {
 
 .content {
     height: 500px;
-    // background-color: $color-hover;
 }
