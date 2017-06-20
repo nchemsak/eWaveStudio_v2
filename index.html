@@ -39,8 +39,7 @@
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
                         <li><a href="#">Sequencer</a></li>
-                        <li><a href="#">MIDI Sampler</a></li>
-                        <li><a href="#">MIDI Oscillator</a></li>
+                        <li><a href="#">MIDI</a></li>
                     </ul>
                     <div class="collapse nav navbar-nav nav-collapse slide-down" id="nav-collapse2">
                         <form class="navbar-form navbar-right form-inline" role="form">
@@ -56,32 +55,17 @@
                         </form>
                     </div>
                     <ul class="nav navbar-nav navbar-right">
-                        <li>
-                            <!-- <a class="btn btn-default btn-outline btn-circle collapsed" data-toggle="collapse" href="#nav-collapse2" aria-expanded="false" aria-controls="nav-collapse2">Sign in</a> -->
-                            <a href="#nav-collapse2" class="dropdown-toggle" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="nav-collapse2">Sign In</a>
-
-                        </li>
                         <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Effects<span class="caret"></span></a>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">User Account<span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li><a href="#">Delay</a></li>
-                                <li><a href="#">Flanger</a></li>
-                                <li><a href="#">Tremolo</a></li>
-                                <li><a href="#">Distortion</a></li>
-                                <li><a href="#">Reverb</a></li>
+                                <li><em>current user: nick@email.com</em></li>
                                 <li role="separator" class="divider"></li>
-                                <li><a href="#">Settings</a></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">EQ<span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">HiPass</a></li>
-                                <li><a href="#">LowPass</a></li>
-                                <li><a href="#">Telephone</a></li>
-                                <li><a href="#">Mid</a></li>
+                                <li> <a href="#nav-collapse2" class="dropdown-toggle" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="nav-collapse2">Sign In</a></li>
+                                <li><a href="#">Change Password </a></li>
                                 <li role="separator" class="divider"></li>
-                                <li><a href="#">Settings</a></li>
+                                <li><a href="#">Save Project </a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">Sign Out</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -210,9 +194,21 @@
                                 <div>
                                     <img class="card-img-top" data-src="holder.js/100%x180/" alt="Card image cap">
                                     <div class="card-block">
-                                        <h4 class="card-title">Card title</h4>
+                                        <h4 class="card-title">EQ</h4>
                                         <p class="card-text">red #3</p>
-                                        <a href="#" class="btn btn-primary">Button</a>
+                                        <ul>
+                                            <li class="dropdown">
+                                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Choose<span class="caret"></span></a>
+                                                <ul class="dropdown-menu">
+                                                    <li><a href="#">HiPass</a></li>
+                                                    <li><a href="#">LowPass</a></li>
+                                                    <li><a href="#">Telephone</a></li>
+                                                    <li><a href="#">Mid</a></li>
+                                                    <li role="separator" class="divider"></li>
+                                                    <li><a href="#">Settings</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
@@ -223,9 +219,22 @@
                                 <div class="card">
                                     <img class="card-img-top" data-src="holder.js/100%x180/" alt="Card image cap">
                                     <div class="card-block">
-                                        <h4 class="card-title">Card title</h4>
+                                        <h4 class="card-title">Effects</h4>
                                         <p class="card-text">yellow #4</p>
-                                        <a href="#" class="btn btn-primary">Button</a>
+                                        <ul>
+                                            <li class="dropdown">
+                                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Choose<span class="caret"></span></a>
+                                                <ul class="dropdown-menu">
+                                                    <li><a href="#">Delay</a></li>
+                                                    <li><a href="#">Flanger</a></li>
+                                                    <li><a href="#">Tremolo</a></li>
+                                                    <li><a href="#">Distortion</a></li>
+                                                    <li><a href="#">Reverb</a></li>
+                                                    <li role="separator" class="divider"></li>
+                                                    <li><a href="#">Settings</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
