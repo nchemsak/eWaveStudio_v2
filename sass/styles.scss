@@ -50,9 +50,10 @@ body {
     background-color: $color-background;
 }
 
-// .modal-backdrop {
-//   z-index: -1;
-// }
+.modal-backdrop {
+  z-index: -1;
+}
+
 .row {
     display: block;
 }
@@ -77,15 +78,32 @@ a.dropdown-toggle {
     width: 20px;
 }
 
+// #bs-example-navbar-collapse-1 > ul.nav.navbar-nav > a:hover {
+//     background-color: $color-hover;
+// }
+
+// .dropdown-toggle:hover {
+//     background: $color-hover !important;
+// }
+
+#bs-example-navbar-collapse-1 > ul > li > a:hover {
+    background-color: $color-hover;
+    color: black;
+}
+
+#bs-example-navbar-collapse-1 > ul > li > a:visited {
+    background-color: $color-hover;
+}
+
 .pad {
-    min-width: 35px;
-    min-height: 35px;
-    max-width: 35px;
-    max-height: 35px;
-    margin-bottom: 2px;
+    min-width: 25px;
+    min-height: 25px;
+    max-width: 25px;
+    max-height: 25px;
+    // margin-bottom: 20px;
     display: inline-block;
     background: $color-pad;
-    margin-left: 8px;
+    margin-left: 4px;
     cursor: pointer;
     border-radius: 3px;
     &:hover {
@@ -191,4 +209,3 @@ ul.dropdown-menu {
 .content {
     height: 500px;
 }
-

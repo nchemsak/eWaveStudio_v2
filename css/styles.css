@@ -19,6 +19,9 @@ TABLE OF CONTENTS:
 body {
   background-color: #f2f2f2; }
 
+.modal-backdrop {
+  z-index: -1; }
+
 .row {
   display: block; }
 
@@ -36,15 +39,21 @@ a.dropdown-toggle {
 .fx {
   width: 20px; }
 
+#bs-example-navbar-collapse-1 > ul > li > a:hover {
+  background-color: #ff6e42;
+  color: black; }
+
+#bs-example-navbar-collapse-1 > ul > li > a:visited {
+  background-color: #ff6e42; }
+
 .pad {
-  min-width: 35px;
-  min-height: 35px;
-  max-width: 35px;
-  max-height: 35px;
-  margin-bottom: 2px;
+  min-width: 25px;
+  min-height: 25px;
+  max-width: 25px;
+  max-height: 25px;
   display: inline-block;
   background: #DADADA;
-  margin-left: 8px;
+  margin-left: 4px;
   cursor: pointer;
   border-radius: 3px; }
   .pad:hover {
