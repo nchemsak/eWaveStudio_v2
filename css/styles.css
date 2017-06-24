@@ -14,6 +14,8 @@ TABLE OF CONTENTS:
     2.1 Navbar
     2.2 Sequencer / Body
     2.3 Footer
+    2.4 Headings
+        - h1, h2, h3
 3. Media Queries
 */
 #bs-example-navbar-collapse-1 > ul.nav.navbar-nav.navbar-right > li.dropdown.open > ul {
@@ -29,7 +31,8 @@ a.dropdown-toggle {
 
 .navbar {
   background-color: black;
-  border: none; }
+  border: none;
+  border-radius: 0; }
 
 #bs-example-navbar-collapse-1 > ul > li > a:hover {
   background-color: silver;
@@ -114,7 +117,7 @@ input.form-control {
   transition: all .25s linear;
   cursor: pointer; }
   .list-item:hover {
-    background: #ffb612;
+    background: #6180c9;
     color: #fffcfb;
     transform: scale(1.5);
     box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.3);
@@ -142,6 +145,18 @@ ul.dropdown-menu {
 .dropdown-menu > li > a {
   cursor: pointer; }
 
+h1 {
+  font-family: Inconsolata;
+  font-size: 36px; }
+
+h2 {
+  font-family: "PT Mono", monospace;
+  font-size: 22px; }
+
+h3 {
+  font-family: "Bubbler One", monospace;
+  font-size: 22px; }
+
 .modal-backdrop {
   z-index: -1; }
 
@@ -161,5 +176,39 @@ ul.dropdown-menu {
 
 .content {
   height: 500px; }
+
+a:hover {
+  text-decoration: none; }
+
+.record-button:before {
+  content: "";
+  z-index: 0;
+  display: block;
+  width: 40px;
+  height: 40px;
+  background: #ba1f24;
+  border-radius: 50%;
+  animation: pulse-border 2500ms ease-out infinite; }
+
+.record-button:after {
+  content: "";
+  z-index: 1;
+  display: block;
+  width: 40px;
+  height: 40px;
+  background: #fa183d;
+  border-radius: 50%;
+  transition: all 200ms; }
+
+.record-button:hover:after {
+  background-color: #da0528; }
+
+@keyframes pulse-border {
+  0% {
+    transform: scale(1);
+    opacity: 1; }
+  100% {
+    transform: scale(1.5);
+    opacity: 0; } }
 
 /*# sourceMappingURL=styles.css.map */

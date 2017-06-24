@@ -2,91 +2,96 @@
 <html lang="en">
 
 <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>eWave Studio 2</title>
-    <link rel="canonical" href="">
-    <meta name="keywords" content="">
-    <meta name="author" content="Nick Chemsak">
-    <meta name="description" content="">
-    <!-- STYLESHEETS -->
-    <link href="https://fonts.googleapis.com/css?family=Droid+Sans" rel="stylesheet">
-    <link rel="stylesheet" href="lib/node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="lib/node_modules/font-awesome/css/font-awesome.min.css">
-    <!-- <link rel="stylesheet" href="lib/node_modules/material-design-lite/material.min.css"> -->
-    <link rel="stylesheet" href="css/styles.min.css">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>eWave Studio 2</title>
+  <link rel="canonical" href="">
+  <meta name="keywords" content="">
+  <meta name="author" content="Nick Chemsak">
+  <meta name="description" content="">
+  <!-- STYLESHEETS -->
+  <!-- <link href="https://fonts.googleapis.com/css?family=Droid+Sans&effect=font-effect-anaglyph" rel="stylesheet"> -->
+  <link href="https://fonts.googleapis.com/css?family=Bubbler+One|Droid+Sans|Inconsolata|PT+Mono|Roboto" rel="stylesheet">
+  <link rel="stylesheet" href="lib/node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="lib/node_modules/font-awesome/css/font-awesome.min.css">
+  <!-- <link rel="stylesheet" href="lib/node_modules/material-design-lite/material.min.css"> -->
+  <link rel="stylesheet" href="css/styles.min.css">
 </head>
 
 <body>
-    <div class="body-container">
-        <!-- ///////////////////////////////////////////////////////////////////////
+  <div class="body-container">
+    <!-- ///////////////////////////////////////////////////////////////////////
                                     NAVBAR
      /////////////////////////////////////////////////////////////////////// -->
-        <nav class="navbar navbar-default">
-            <div class="container-fluid">
-                <!-- here is a super note -->
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="#">eWave Studio 2.0</a>
-                </div>
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav">
-                        <li><a href="#">Sequencer</a></li>
-                        <li><a href="#">MIDI</a></li>
-                    </ul>
-                    <div class="collapse nav navbar-nav nav-collapse slide-down" id="nav-collapse2">
-                        <form class="navbar-form navbar-right form-inline" role="form">
-                            <div class="form-group">
-                                <label class="sr-only" for="Email">Email</label>
-                                <input type="email" class="form-control" id="Email" placeholder="Email" autofocus required />
-                            </div>
-                            <div class="form-group">
-                                <label class="sr-only" for="Password">Password</label>
-                                <input type="password" class="form-control" id="Password" placeholder="Password" required />
-                            </div>
-                            <button type="submit" class="btn">Sign in</button>
-                        </form>
-                    </div>
-                    <ul class="nav navbar-nav navbar-right">
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">User Account<span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li><em>current user: nick@email.com</em></li>
-                                <li role="separator" class="divider"></li>
-                                <li> <a href="#nav-collapse2" class="dropdown-toggle" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="nav-collapse2">Sign In</a></li>
-                                <li><a href="#">Change Password </a></li>
-                                <li role="separator" class="divider"></li>
-                                <li><a href="#">Save Project </a></li>
-                                <li role="separator" class="divider"></li>
-                                <li><a href="#">Sign Out</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-                <!-- /.navbar-collapse -->
-            </div>
-            <!-- /.container-fluid -->
-        </nav>
-        <!-- ///////////////////////////////////////////////////////////////////////
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <!-- here is a super note -->
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">eWave Studio 2.0</a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li><a href="#">Sequencer</a></li>
+            <li><a href="#">MIDI</a></li>
+          </ul>
+          <div class="record-button" href="#">
+            <!-- <span></span> -->
+          </div>
+          <div class="collapse nav navbar-nav nav-collapse slide-down" id="nav-collapse2">
+            <form class="navbar-form navbar-right form-inline" role="form">
+              <div class="form-group">
+                <label class="sr-only" for="Email">Email</label>
+                <input type="email" class="form-control" id="Email" placeholder="Email" autofocus required />
+              </div>
+              <div class="form-group">
+                <label class="sr-only" for="Password">Password</label>
+                <input type="password" class="form-control" id="Password" placeholder="Password" required />
+              </div>
+              <button type="submit" class="btn">Sign in</button>
+            </form>
+          </div>
+          <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">User Account<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><em>current user: nick@email.com</em></li>
+                <li role="separator" class="divider"></li>
+                <li> <a href="#nav-collapse2" class="dropdown-toggle" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="nav-collapse2">Sign In</a></li>
+                <li><a href="#">Change Password </a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Save Project </a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Sign Out</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+      </div>
+      <!-- /.container-fluid -->
+    </nav>
+    <!-- ///////////////////////////////////////////////////////////////////////
                                     BODY CONTENT
      /////////////////////////////////////////////////////////////////////// -->
-        <!-- ///////////////////////////////////////////////////////////////////////
+    <h1>eWave Studio 2.0</h1>
+    <!-- ///////////////////////////////////////////////////////////////////////
                                     SEQUENCER
      /////////////////////////////////////////////////////////////////////// -->
-        <h2 class="body-subhead">Sequencer</h2>
-        <h3 class="addChannel">Add channel</h3>
-        <div class="container-fluid">
-            <div class="col-md-12" id="sequencer">
-                <!-- <div class="row" data-instrument="hihat"> -->
-                <!--  <form>
+    <h2 class="body-subhead">Sequencer</h2>
+    <h3 class="addChannel">Add channel</h3>
+    <div class="container-fluid">
+      <div class="col-xs-12" id="sequencer">
+        <!-- <div class="row" data-instrument="hihat"> -->
+        <!--  <form>
                 <label class="checkbox">
                     <input type="checkbox">
                 </label>
@@ -153,114 +158,119 @@
             <div class="pad column_13"></div>
             <div class="pad column_14"></div>
             <div class="pad column_15"></div> -->
-            </div>
-        </div>
+      </div>
     </div>
-    <div class="content-wrapper">
-        <div class="content">
-            <h2 class="content-head">project settings</h2> <span>[<a href="#"> X </a>]</span>
-            <br />
-            <div class="container text-center">
-                <div class="row">
-                    <div class="clearfix">
-                        <div class="col-xs-12 col-md-3 col-md-push-3">
-                            <div class="alert alert-warning alert-dismissable fade in">
-                                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                                <div class="card">
-                                    <img class="card-img-top" data-src="holder.js/100%x180/" alt="Card image cap">
-                                    <div class="card-block">
-                                        <h4 class="card-title">Volume Control</h4>
-                                        <p class="card-text">Yellow number 2</p>
-                                        <a href="#" class="btn btn-primary">Button</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xs-6 col-md-3 col-md-pull-3">
-                            <div class="alert alert-info alert-dismissable fade in">
-                                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                                <div class="card">
-                                    <img class="card-img-top" data-src="holder.js/100%x180/" alt="Card image cap">
-                                    <div class="card-block">
-                                        <h4 class="card-title">USB Input</h4>
-                                        <p class="card-text">blue #1</p>
-                                        <a href="#" class="btn btn-primary">Button</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xs-6 col-md-3">
-                            <div class="alert alert-danger alert-dismissable fade in">
-                                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                                <div>
-                                    <img class="card-img-top" data-src="holder.js/100%x180/" alt="Card image cap">
-                                    <div class="card-block">
-                                        <h4 class="card-title">EQ</h4>
-                                        <p class="card-text">red #3</p>
-                                        <ul>
-                                            <li class="dropdown">
-                                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Choose<span class="caret"></span></a>
-                                                <ul class="dropdown-menu">
-                                                    <li><a href="#">HiPass</a></li>
-                                                    <li><a href="#">LowPass</a></li>
-                                                    <li><a href="#">Telephone</a></li>
-                                                    <li><a href="#">Mid</a></li>
-                                                    <li role="separator" class="divider"></li>
-                                                    <li><a href="#">Settings</a></li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xs-12 col-md-3">
-                            <div class="alert alert-warning alert-dismissable fade in">
-                                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                                <div class="card">
-                                    <img class="card-img-top" data-src="holder.js/100%x180/" alt="Card image cap">
-                                    <div class="card-block">
-                                        <h4 class="card-title">Effects</h4>
-                                        <p class="card-text">yellow #4</p>
-                                        <ul>
-                                            <li class="dropdown">
-                                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Choose<span class="caret"></span></a>
-                                                <ul class="dropdown-menu">
-                                                    <li><a href="#">Delay</a></li>
-                                                    <li><a href="#">Flanger</a></li>
-                                                    <li><a href="#">Tremolo</a></li>
-                                                    <li><a href="#">Distortion</a></li>
-                                                    <li><a href="#">Reverb</a></li>
-                                                    <li role="separator" class="divider"></li>
-                                                    <li><a href="#">Settings</a></li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+  </div>
+  <div class="content-wrapper">
+    <div class="content">
+      <div class="row">
+        <div class="col-xs-6">
+          <h2 class="content-head">project settings</h2>
+        </div>
+        <div class="col-xs-6">
+          <a href="#">
+            <span class="content-head" aria-label="Close Account Info Modal Box">&times; &#x274C;</span>
+          </a>
+        </div>
+      </div>
+      <br />
+      <div class="container text-center">
+        <div class="row">
+          <div class="clearfix">
+            <div class="col-xs-12 col-md-3 col-md-push-3">
+              <div class="alert alert-warning alert-dismissable fade in">
+                <div class="card">
+                  <img class="card-img-top" data-src="holder.js/100%x180/" alt="Card image cap">
+                  <div class="card-block">
+                    <h4 class="card-title">Volume Control</h4>
+                    <p class="card-text">Yellow number 2</p>
+                    <a href="#" class="btn btn-primary">Button</a>
+                  </div>
                 </div>
+              </div>
             </div>
+            <div class="col-xs-6 col-md-3 col-md-pull-3">
+              <div class="alert alert-info fade in">
+                <div class="card">
+                  <img class="card-img-top" alt="USB Input" />
+                  <div class="card-block">
+                    <h4 class="card-title">USB Input</h4>
+                    <p class="card-text">blue #1</p>
+                    <a href="#" class="btn btn-primary">Button</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-6 col-md-3">
+              <div class="alert alert-danger alert-dismissable fade in">
+                <div>
+                  <img class="card-img-top" data-src="holder.js/100%x180/" alt="Card image cap">
+                  <div class="card-block">
+                    <h4 class="card-title">EQ</h4>
+                    <p class="card-text">red #3</p>
+                    <ul>
+                      <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Choose<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                          <li><a href="#">HiPass</a></li>
+                          <li><a href="#">LowPass</a></li>
+                          <li><a href="#">Telephone</a></li>
+                          <li><a href="#">Mid</a></li>
+                          <li role="separator" class="divider"></li>
+                          <li><a href="#">Settings</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-12 col-md-3">
+              <div class="alert alert-warning alert-dismissable fade in">
+                <div class="card">
+                  <img class="card-img-top" data-src="holder.js/100%x180/" alt="Card image cap">
+                  <div class="card-block">
+                    <h4 class="card-title">Effects</h4>
+                    <p class="card-text">yellow #4</p>
+                    <ul>
+                      <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Choose<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                          <li><a href="#">Delay</a></li>
+                          <li><a href="#">Flanger</a></li>
+                          <li><a href="#">Tremolo</a></li>
+                          <li><a href="#">Distortion</a></li>
+                          <li><a href="#">Reverb</a></li>
+                          <li role="separator" class="divider"></li>
+                          <li><a href="#">Settings</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
-    <!-- </div> -->
-    <!-- ///////////////////////////////////////////////////////////////////////
+  </div>
+  <!-- </div> -->
+  <!-- ///////////////////////////////////////////////////////////////////////
                                     MIDI SAMPLER
      /////////////////////////////////////////////////////////////////////// -->
-    <!-- <h2>MIDI Sampler</h2> -->
-    <!-- ///////////////////////////////////////////////////////////////////////
+  <!-- <h2>MIDI Sampler</h2> -->
+  <!-- ///////////////////////////////////////////////////////////////////////
                                     MIDI OSCILLATOR
      /////////////////////////////////////////////////////////////////////// -->
-    <!-- <h2>MIDI Oscillator</h2> -->
-    <!-- **********************************************************************
+  <!-- <h2>MIDI Oscillator</h2> -->
+  <!-- **********************************************************************
                                     SCRIPT TAGS
       ********************************************************************** -->
-    <script src="lib/node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="lib/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <!-- <script src="javascripts/main.js"></script> -->
-    <script src="javascripts/temp.js"></script>
+  <script src="lib/node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="lib/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <!-- <script src="javascripts/main.js"></script> -->
+  <script src="javascripts/temp.js"></script>
 </body>
 
 </html>
