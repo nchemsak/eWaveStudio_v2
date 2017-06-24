@@ -25,7 +25,8 @@ TABLE OF CONTENTS:
 // ***************************************************************************
 // 1.1                              FONTS
 // ***************************************************************************
-$font-stack: Roboto,
+$font-stack: 'Droid Sans',
+Roboto,
 sans-serif;
 $h2: 22px;
 $h3: 21px;
@@ -40,7 +41,9 @@ $topbarfont: 16px;
 $color-background: #f2f2f2;
 $color-navbar: black;
 $color-pad: #DADADA;
-// $color-hover: #ff6e42;
+$color-orange: #ff6e42;
+$color-blue: #6180c9;
+$color-yellow: #ffb612;
 $color-hover: silver;
 $color-text: #fffcfb;
 // ***************************************************************************
@@ -90,6 +93,11 @@ a.dropdown-toggle {
 // ***************************************************************************
 // 2.2                            SEQUENCER / BODY
 // ***************************************************************************
+
+* {
+    font-family: $font-stack;
+}
+
 body {
   background-color: $color-background;
 }
@@ -182,11 +190,10 @@ input.form-control {
   text-decoration: none;
   transition: all .25s linear;
   cursor: pointer;
-
   &:hover {
-    background: #ff6e42;
+    background: $color-yellow;
     color: #fffcfb;
-     transform: scale(1.5);
+    transform: scale(1.5);
     box-shadow: 0 8px 6px -6px rgba(0, 0, 0, .3);
     z-index: 100;
   }
@@ -239,8 +246,8 @@ ul.dropdown-menu {
   width: 100%;
   min-height: 50%;
   // z-index: 0;
-  // background: white;
   background-color: $color-hover;
+  border-top: 5px solid black;
 }
 
 .content-head {

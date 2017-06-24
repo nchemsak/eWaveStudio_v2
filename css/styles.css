@@ -38,6 +38,9 @@ a.dropdown-toggle {
 #bs-example-navbar-collapse-1 > ul > li > a:visited {
   background-color: silver; }
 
+* {
+  font-family: "Droid Sans", Roboto, sans-serif; }
+
 body {
   background-color: #f2f2f2; }
 
@@ -111,7 +114,7 @@ input.form-control {
   transition: all .25s linear;
   cursor: pointer; }
   .list-item:hover {
-    background: #ff6e42;
+    background: #ffb612;
     color: #fffcfb;
     transform: scale(1.5);
     box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.3);
@@ -147,7 +150,8 @@ ul.dropdown-menu {
   top: 100%;
   width: 100%;
   min-height: 50%;
-  background-color: silver; }
+  background-color: silver;
+  border-top: 5px solid black; }
 
 .content-head {
   font-weight: 400;
