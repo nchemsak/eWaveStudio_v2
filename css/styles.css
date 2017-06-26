@@ -41,8 +41,13 @@ a.dropdown-toggle {
 #bs-example-navbar-collapse-1 > ul > li > a:visited {
   background-color: silver; }
 
-* {
-  font-family: "Droid Sans", Roboto, sans-serif; }
+*,
+*:before,
+*:after {
+  font-family: "Droid Sans", Roboto, sans-serif;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
 
 body {
   background-color: #f2f2f2; }
@@ -51,27 +56,10 @@ body {
   display: block; }
 
 #sequencer {
-  margin-left: 50px; }
+  margin-left: 10px; }
 
 .fx {
   width: 20px; }
-
-.pad {
-  min-width: 25px;
-  min-height: 25px;
-  max-width: 25px;
-  max-height: 25px;
-  display: inline-block;
-  background: #DADADA;
-  margin-left: 4px;
-  cursor: pointer;
-  border-radius: 3px; }
-  .pad:hover {
-    background: silver;
-    color: #fffcfb;
-    transition: all .05s linear; }
-    .pad:hover:before, .pad:hover:after {
-      transition: all .25s linear; }
 
 svg {
   margin-right: 10px; }
@@ -108,14 +96,22 @@ input.form-control {
 .list-item {
   background: #000;
   color: #575757;
-  height: 2.5em;
-  width: 2.5em;
+  height: 1em;
+  width: 1em;
   border: 1px solid #060606;
   position: relative;
   display: inline-block;
   text-decoration: none;
   transition: all .25s linear;
   cursor: pointer; }
+  @media (min-width: 768px) {
+    .list-item {
+      height: 2.5em;
+      width: 2.5em; } }
+  @media (min-width: 992px) {
+    .list-item {
+      height: 3.5em;
+      width: 3.5em; } }
   .list-item:hover {
     background: #6180c9;
     color: #fffcfb;
@@ -182,7 +178,10 @@ a:hover {
 
 .record-button:before {
   content: "";
+  position: absolute;
   z-index: 0;
+  left: 10%;
+  bottom: 20%;
   display: block;
   width: 40px;
   height: 40px;
@@ -192,7 +191,10 @@ a:hover {
 
 .record-button:after {
   content: "";
+  position: absolute;
   z-index: 1;
+  left: 10%;
+  bottom: 20%;
   display: block;
   width: 40px;
   height: 40px;

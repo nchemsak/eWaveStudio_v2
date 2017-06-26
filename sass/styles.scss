@@ -53,11 +53,34 @@ $color-text: #fffcfb;
 // ***************************************************************************
 // 1.3                              DIMENSIONS
 // ***************************************************************************
-// $home-banner-height-lg:672px;
-// $nav-height-lg:200px;
-// //$home-container2-height-lg:350px;
-//
-//
+//Definitions for responsive Bootstrap go here
+// @mixin xs-only {
+//     @media (max-width: 767px) {
+//         @content;
+//     }
+// }
+@mixin sm {
+    @media (min-width: 768px) {
+        @content;
+    }
+}
+
+@mixin md {
+    @media (min-width: 992px) {
+        @content;
+    }
+}
+
+// @mixin lg {
+//     @media (min-width: 1200px) {
+//         @content;
+//     }
+// }
+// @mixin xlg {
+//     @media (min-width: 1700px) {
+//         @content;
+//     }
+// }
 // #############################################################################
 // #############################################################################
 // 2                          PAGE SPECIFIC DEFINITIONS
@@ -67,171 +90,183 @@ $color-text: #fffcfb;
 // 2.1                              NAVBAR
 // ***************************************************************************
 #bs-example-navbar-collapse-1 > ul.nav.navbar-nav.navbar-right > li.dropdown.open > ul {
-  width: 300px;
+    width: 300px;
 }
 
 #bs-example-navbar-collapse-1 > ul.nav.navbar-nav.navbar-right > li.dropdown.open > ul > li {
-  padding: 3px 20px;
-  color: red;
+    padding: 3px 20px;
+    color: red;
 }
 
 a.dropdown-toggle {
-  text-decoration: none;
-  cursor: pointer;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 .navbar {
-  background-color: $color-navbar;
-  border: none;
-  border-radius: 0;
+    background-color: $color-navbar;
+    border: none;
+    border-radius: 0;
 }
 
 #bs-example-navbar-collapse-1 > ul > li > a:hover {
-  background-color: $color-hover;
-  color: black;
+    background-color: $color-hover;
+    color: black;
 }
 
 #bs-example-navbar-collapse-1 > ul > li > a:visited {
-  background-color: $color-hover;
+    background-color: $color-hover;
 }
 
 // ***************************************************************************
 // 2.2                            SEQUENCER / BODY
 // ***************************************************************************
-* {
-  font-family: $font-stack;
+*,
+*:before,
+*:after {
+    font-family: $font-stack;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 body {
-  background-color: $color-background;
+    background-color: $color-background;
 }
 
 .row {
-  display: block;
+    display: block;
 }
 
 #sequencer {
-  margin-left: 50px;
-  // display: inline-flex;
-  // align-items: center;
+    margin-left: 10px;
+    // display: inline-flex;
+    // align-items: center;
 }
 
 .fx {
-  width: 20px;
+    width: 20px;
 }
 
-.pad {
-  min-width: 25px;
-  min-height: 25px;
-  max-width: 25px;
-  max-height: 25px;
-  // margin-bottom: 20px;
-  display: inline-block;
-  background: $color-pad;
-  margin-left: 4px;
-  cursor: pointer;
-  border-radius: 3px;
-  &:hover {
-    background: $color-hover;
-    color: #fffcfb;
-    transition: all .05s linear;
-    // box-shadow: -2em 2em 0 #e1e1e1;
-    &:before,
-    &:after {
-      transition: all .25s linear;
-    }
-  }
-}
-
+// .pad {
+//     min-width: 25px;
+//     min-height: 25px;
+//     max-width: 25px;
+//     max-height: 25px;
+//     // margin-bottom: 20px;
+//     display: inline-block;
+//     background: $color-pad;
+//     margin-left: 4px;
+//     cursor: pointer;
+//     border-radius: 3px;
+//     &:hover {
+//         background: $color-hover;
+//         color: #fffcfb;
+//         transition: all .05s linear;
+//         // box-shadow: -2em 2em 0 #e1e1e1;
+//         &:before,
+//         &:after {
+//             transition: all .25s linear;
+//         }
+//     }
+// }
 svg {
-  margin-right: 10px;
+    margin-right: 10px;
 }
 
 input.form-control {
-  background-color: transparent;
-  display: inline-block;
-  width: 100px;
+    background-color: transparent;
+    display: inline-block;
+    width: 100px;
 }
 
 .addChannel {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 .checkbox input[type=checkbox] {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 .body-container {
-  background: $color-background;
-  // z-index: -1;
-  overflow: hidden;
-  width: 100%;
-  height: 100%;
-  height: 100vh;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  position: fixed !important;
+    background: $color-background;
+    // z-index: -1;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: fixed !important;
 }
 
 .body-subhead {
-  // color: white;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  opacity: 0.7;
-  padding: 10px;
+    // color: white;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    opacity: 0.7;
+    padding: 10px;
 }
 
 .list-item {
-  background: #000;
-  color: #575757;
-  height: 2.5em;
-  width: 2.5em;
-  border: 1px solid #060606;
-  position: relative;
-  display: inline-block;
-  text-decoration: none;
-  transition: all .25s linear;
-  cursor: pointer;
-  &:hover {
-    background: $color-blue;
-    color: #fffcfb;
-    transform: scale(1.5);
-    box-shadow: 0 8px 6px -6px rgba(0, 0, 0, .3);
-    z-index: 100;
-  }
+    @include sm {
+        height: 2.5em;
+        width: 2.5em;
+    }
+    @include md {
+        height: 3.5em;
+        width: 3.5em;
+    }
+    background: #000;
+    color: #575757;
+    height: 1em;
+    width: 1em;
+    border: 1px solid #060606;
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    transition: all .25s linear;
+    cursor: pointer;
+    &:hover {
+        background: $color-blue;
+        color: #fffcfb;
+        transform: scale(1.5);
+        box-shadow: 0 8px 6px -6px rgba(0, 0, 0, .3);
+        z-index: 100;
+    }
 }
 
 // ***************************************************************************
 //                             LIST STYLES
 // ***************************************************************************
 li.dropdown {
-  list-style: none;
-  display: inline;
+    list-style: none;
+    display: inline;
 }
 
 li {
-  list-style: none;
+    list-style: none;
 }
 
 ul.dropdown-menu {
-  box-shadow: none;
-  border: 3px solid black;
-  min-width: 200px;
-  z-index: 1;
+    box-shadow: none;
+    border: 3px solid black;
+    min-width: 200px;
+    z-index: 1;
 }
 
 .dropdown-menu>li>a:hover {
-  background-color: $color-hover;
+    background-color: $color-hover;
 }
 
 .dropdown-menu .divider {
-  background-color: black;
+    background-color: black;
 }
 
 .dropdown-menu>li>a {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 // ***************************************************************************
@@ -241,53 +276,53 @@ ul.dropdown-menu {
 // 2.4                            HEADINGS
 // ***************************************************************************
 h1 {
-  font-family: $font-heading;
-  font-size: $h1;
+    font-family: $font-heading;
+    font-size: $h1;
 }
 
 h2 {
-  font-family: $font-content;
-  font-size: $h2;
+    font-family: $font-content;
+    font-size: $h2;
 }
 
 h3 {
-  font-family: $font-caption;
-  font-size: $h2;
+    font-family: $font-caption;
+    font-size: $h2;
 }
 
 // ************************************************************************
 // EFFECTS MODAL
 // ************************************************************************
 .modal-backdrop {
-  z-index: -1;
+    z-index: -1;
 }
 
 // ************************************************************************
 // PROJECT SETTINGS - scroll up bottom menu
 // ************************************************************************
 .content-wrapper {
-  position: absolute;
-  top: 100%;
-  width: 100%;
-  min-height: 50%;
-  // z-index: 0;
-  background-color: $color-hover;
-  border-top: 5px solid black;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    min-height: 50%;
+    // z-index: 0;
+    background-color: $color-hover;
+    border-top: 5px solid black;
 }
 
 .content-head {
-  font-weight: 400;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  margin: 2em 0 1em;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin: 2em 0 1em;
 }
 
 .content {
-  height: 500px;
+    height: 500px;
 }
 
 a:hover {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 // #############################################################################
@@ -313,46 +348,46 @@ a:hover {
 //   padding: 18px 20px 18px 28px;
 // }
 .record-button:before {
-  content: "";
-  // position: absolute;
-  z-index: 0;
-  // left: 50%;
-  // top: 50%;
-  // transform: translateX(-50%) translateY(-50%);
-  display: block;
-  width: 40px;
-  height: 40px;
-  background: #ba1f24;
-  border-radius: 50%;
-  animation: pulse-border 2500ms ease-out infinite;
+    content: "";
+    position: absolute;
+    z-index: 0;
+    left: 10%;
+    bottom: 20%;
+    // transform: translateX(-50%) translateY(-50%);
+    display: block;
+    width: 40px;
+    height: 40px;
+    background: #ba1f24;
+    border-radius: 50%;
+    animation: pulse-border 2500ms ease-out infinite;
 }
 
 .record-button:after {
-  content: "";
-  // position: absolute;
-  z-index: 1;
-  // left: 50%;
-  // top: 50%;
-  // transform: translateX(-50%) translateY(-50%);
-  display: block;
-  width: 40px;
-  height: 40px;
-  background: #fa183d;
-  border-radius: 50%;
-  transition: all 200ms;
+    content: "";
+    position: absolute;
+    z-index: 1;
+    left: 10%;
+    bottom: 20%;
+    // transform: translateX(-50%) translateY(-50%);
+    display: block;
+    width: 40px;
+    height: 40px;
+    background: #fa183d;
+    border-radius: 50%;
+    transition: all 200ms;
 }
 
 .record-button:hover:after {
-  background-color: darken(#fa183d, 10%);
+    background-color: darken(#fa183d, 10%);
 }
 
 @keyframes pulse-border {
-  0% {
-    transform: scale(1);
-    opacity: 1;
-  }
-  100% {
-    transform: scale(1.5);
-    opacity: 0;
-  }
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.5);
+        opacity: 0;
+    }
 }
