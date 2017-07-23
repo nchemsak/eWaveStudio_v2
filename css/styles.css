@@ -150,7 +150,7 @@ h2 {
 
 h3 {
   font-family: "Bubbler One", monospace;
-  font-size: 22px; }
+  font-size: 21px; }
 
 .modal-backdrop {
   z-index: -1; }
@@ -265,7 +265,6 @@ a.tooltip span {
   /* Black*/
   overflow-x: hidden;
   /* Disable horizontal scroll */
-  padding-top: 60px;
   /* Place content 60px from the top */
   transition: .5s;
   /* 0.5 second transition effect to slide in the sidenav */ }
