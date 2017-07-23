@@ -1,7 +1,7 @@
 "use strict";
 
 $(".addChannel").click(function() {
-    $("#sequencer").append(
+    $("#main").append(
         `<div class="row" data-instrument="hihat">
         <form>
             <label class="checkbox">
