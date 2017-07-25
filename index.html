@@ -2,28 +2,28 @@
 <html lang="en">
 
 <head>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>eWave Studio 2</title>
-  <link rel="canonical" href="https://nchemsak.github.io">
-  <meta name="keywords" content="webaudio api sequencer drum machine midi ephemeral wave">
-  <meta name="author" content="Nick Chemsak">
-  <meta name="description" content="eWave Studio 2 provides users with a web-based audio workstation, drum machine, and audio effects processor.">
-  <!-- STYLESHEETS -->
-  <link href="https://fonts.googleapis.com/css?family=Bubbler+One|Droid+Sans|Inconsolata|PT+Mono|Roboto" rel="stylesheet">
-  <link rel="stylesheet" href="lib/node_modules/bootstrap/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="lib/node_modules/font-awesome/css/font-awesome.min.css">
-  <!-- <link rel="stylesheet" href="lib/node_modules/material-design-lite/material.min.css"> -->
-  <link rel="stylesheet" href="css/styles.min.css">
+    <title>eWave Studio 2</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="canonical" href="https://nchemsak.github.io">
+    <meta name="keywords" content="webaudio api sequencer drum machine midi ephemeral wave">
+    <meta name="author" content="Nick Chemsak">
+    <meta name="description" content="eWave Studio 2 provides users with a web-based audio workstation, drum machine, and audio effects processor.">
+    <!-- STYLESHEETS -->
+    <link href="https://fonts.googleapis.com/css?family=Bubbler+One|Droid+Sans|Inconsolata|PT+Mono|Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="lib/node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="lib/node_modules/font-awesome/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="lib/node_modules/material-design-lite/material.min.css"> -->
+    <link rel="stylesheet" href="css/styles.min.css">
 </head>
 
 <body>
-  <div class="body-container">
-    <!-- ///////////////////////////////////////////////////////////////////////
-                                    NAVBAR
+    <div class="body-container">
+        <!-- ///////////////////////////////////////////////////////////////////////
+                                    NAVBAR - not used for now, changed to sidebar instead
      /////////////////////////////////////////////////////////////////////// -->
-    <!--     <nav class="navbar navbar-default">
+        <!--     <nav class="navbar navbar-default">
       <div class="container-fluid">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -70,788 +70,233 @@
         </div>
       </div>
     </nav> -->
-    <!-- ///////////////////////////////////////////////////////////////////////
-                                    BODY CONTENT
+        <!-- ///////////////////////////////////////////////////////////////////////
+                                    SIDEBAR
      /////////////////////////////////////////////////////////////////////// -->
-    <!-- <h1>eWave Studio 2.0</h1> -->
-    <!-- SIDE MENU -->
-    <div id="mySidenav" class="sidenav">
-      <div class="padding">
-        <h3>
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">eWave studio
-                <i class="fa fa-angle-double-left" aria-hidden="true"></i>
-            </a>
-        </h3>
-      </div>
-      <a href="#"><h3>&nbsp;</h3></a>
-      <a href="#"><h3>Sequencer</h3></a>
-      <a href="#"><h3>MIDI</h3></a>
-      <a href="#"><h3>User Account</h3></a>
-    </div>
-    <div class="padding">
-      <h3>
-        <a href="javascript:void(0)" class="closebtn" onclick="openNav()">
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i> eWave studio
-        </a>
-      </h3>
-    </div>
-    <!-- Add all page content inside this div if you want the side nav to push page content to the right -->
-    <div id="main">
-      <!--     <div class="container">
-        <div class="row">
-          <div class="col-xs-12">
-            <h3 class="addChannel">Add channel</h3>
-          </div>
-        </div>
-      </div> -->
-      <!-- SEQUENCER  -->
-      <div class="row" data-instrument="hihat">
-        <form>
-          <label class="checkbox">
-            <input type="checkbox">
-          </label>
-        </form>
-        <a href="#" class="dropdown-toggle" data-toggle="modal" data-target="#myModal" aria-expanded="false">
-          <img src="images/fx_1.png" class="fx" />
-        </a>
-        <div class="modal fade" id="myModal" role="dialog">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title content-head">effects</h4>
-              </div>
-              <div class="modal-body">
-                <ul>
-                  <li><a href="#">Delay</a></li>
-                  <li><a href="#">Flanger</a></li>
-                  <li><a href="#">Tremolo</a></li>
-                  <li><a href="#">Distortion</a></li>
-                  <li><a href="#">Reverb</a></li>
-                </ul>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-              </div>
+        <!-- <h1>eWave Studio 2.0</h1> -->
+        <!-- SIDE MENU -->
+        <div id="mySidenav" class="sidenav">
+            <div class="padding">
+                <h3>
+                  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><!-- eWave studio -->
+                    <i class="fa fa-angle-double-left" aria-hidden="true"></i>
+                  </a>
+                </h3>
             </div>
-          </div>
+            <a href="#"><h3>&nbsp;</h3></a>
+            <a href="#"><h3>Sequencer</h3></a>
+            <a href="#"><h3>MIDI</h3></a>
+            <a href="#"><h3>User Account</h3></a>
         </div>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-            <svg aria-hidden="true" height="16" viewBox="0 0 8 16" width="8">
-              <path d="M8 4v1H0V4h8zM0 8h8V7H0v1zm0 3h8v-1H0v1z"></path>
-            </svg>
-          </a>
-          <ul class="dropdown-menu">
-            <li>
-              <input id="load" name="load" type="file" accept="audio/*">
-              <label for="load">Load Sample...</label>
-            </li>
-            <li><a href="#">Select Sample...</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Settings</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Delete Channel</a></li>
-          </ul>
-        </li>
-        <div class="column_0 list-item"></div>
-        <div class="column_1 list-item"></div>
-        <div class="column_2 list-item"></div>
-        <div class="column_3 list-item"></div>
-        <div class="column_4 list-item"></div>
-        <div class="column_5 list-item"></div>
-        <div class="column_6 list-item"></div>
-        <div class="column_7 list-item"></div>
-        <div class="column_8 list-item"></div>
-        <div class="column_9 list-item"></div>
-        <div class="column_10 list-item"></div>
-        <div class="column_11 list-item"></div>
-        <div class="column_12 list-item"></div>
-        <div class="column_13 list-item"></div>
-        <div class="column_14 list-item"></div>
-        <div class="column_15 list-item"></div>
-      </div>
-      <!-- TRACK 2 -->
-      <div class="row" data-instrument="hihat">
-        <form>
-          <label class="checkbox">
-            <input type="checkbox">
-          </label>
-        </form>
-        <a href="#" class="dropdown-toggle" data-toggle="modal" data-target="#myModal" aria-expanded="false">
-          <img src="images/fx_1.png" class="fx" />
-        </a>
-        <div class="modal fade" id="myModal" role="dialog">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title content-head">effects</h4>
-              </div>
-              <div class="modal-body">
-                <ul>
-                  <li><a href="#">Delay</a></li>
-                  <li><a href="#">Flanger</a></li>
-                  <li><a href="#">Tremolo</a></li>
-                  <li><a href="#">Distortion</a></li>
-                  <li><a href="#">Reverb</a></li>
-                </ul>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-              </div>
+        <!-- ///////////////////////////////////////////////////////////////////////
+                                    BODY CONTENT / SEQUENCER
+     /////////////////////////////////////////////////////////////////////// -->
+        <div class="padding">
+            <h3>
+              <a href="javascript:void(0)" class="closebtn" onclick="openNav()">
+                <i class="fa fa-angle-double-right" aria-hidden="true"></i> eWave studio
+              </a>
+
+            </h3>
+            <h2 class="body-subhead">Sequencer</h2>
+        </div>
+        <!-- Add all page content inside this "main" div if you want the side nav to push page content to the right -->
+        <div id="main">
+            <!-- TRACK 1 -->
+            <div class="container">
+                <div class="row" data-instrument="hihat">
+                    <div class="col-xs-12">
+                        <!-- MUTE CHECKBOX -->
+                        <form>
+                            <label class="checkbox">
+                                <input type="checkbox">
+                            </label>
+                        </form>
+                    </div>
+                </div>
+                <!-- MODAL TRACK EFFECTS -->
+                <a href="#" class="dropdown-toggle" data-toggle="modal" data-target="#myModal" aria-expanded="false"><img src="images/fx_1.png" class="fx" /></a>
+                <div class="modal fade" id="myModal" role="dialog">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title content-head">effects</h4>
+                            </div>
+                            <div class="modal-body">
+                                <ul>
+                                    <li><a href="#">Delay</a></li>
+                                    <li><a href="#">Flanger</a></li>
+                                    <li><a href="#">Tremolo</a></li>
+                                    <li><a href="#">Distortion</a></li>
+                                    <li><a href="#">Reverb</a></li>
+                                </ul>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- LOAD SAMPLE DROPDOWN -->
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                        <svg aria-hidden="true" height="16" viewBox="0 0 8 16" width="8">
+                            <path d="M8 4v1H0V4h8zM0 8h8V7H0v1zm0 3h8v-1H0v1z"></path>
+                        </svg>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <input id="load" name="load" type="file" accept="audio/*">
+                            <label for="load">Load Sample...</label>
+                        </li>
+                        <li><a href="#">Select Sample...</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">Settings</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">Delete Channel</a></li>
+                    </ul>
+                </li>
+                <!-- SEQUENCER BOXES -->
+                <div class="column_0 list-item"></div>
+                <div class="column_1 list-item"></div>
+                <div class="column_2 list-item"></div>
+                <div class="column_3 list-item"></div>
+                <div class="column_4 list-item"></div>
+                <div class="column_5 list-item"></div>
+                <div class="column_6 list-item"></div>
+                <div class="column_7 list-item"></div>
+                <div class="column_8 list-item"></div>
+                <div class="column_9 list-item"></div>
+                <div class="column_10 list-item"></div>
+                <div class="column_11 list-item"></div>
+                <div class="column_12 list-item"></div>
+                <div class="column_13 list-item"></div>
+                <div class="column_14 list-item"></div>
+                <div class="column_15 list-item"></div>
             </div>
-          </div>
+            <!-- end of "main div" -->
         </div>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-            <svg aria-hidden="true" height="16" viewBox="0 0 8 16" width="8">
-              <path d="M8 4v1H0V4h8zM0 8h8V7H0v1zm0 3h8v-1H0v1z"></path>
-            </svg>
-          </a>
-          <ul class="dropdown-menu">
-            <li>
-              <input id="load" name="load" type="file" accept="audio/*">
-              <label for="load">Load Sample...</label>
-            </li>
-            <li><a href="#">Select Sample...</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Settings</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Delete Channel</a></li>
-          </ul>
-        </li>
-        <div class="column_0 list-item"></div>
-        <div class="column_1 list-item"></div>
-        <div class="column_2 list-item"></div>
-        <div class="column_3 list-item"></div>
-        <div class="column_4 list-item"></div>
-        <div class="column_5 list-item"></div>
-        <div class="column_6 list-item"></div>
-        <div class="column_7 list-item"></div>
-        <div class="column_8 list-item"></div>
-        <div class="column_9 list-item"></div>
-        <div class="column_10 list-item"></div>
-        <div class="column_11 list-item"></div>
-        <div class="column_12 list-item"></div>
-        <div class="column_13 list-item"></div>
-        <div class="column_14 list-item"></div>
-        <div class="column_15 list-item"></div>
-      </div>
-      <!-- TRACK 3 -->
-      <div class="row" data-instrument="hihat">
-        <form>
-          <label class="checkbox">
-            <input type="checkbox">
-          </label>
-        </form>
-        <a href="#" class="dropdown-toggle" data-toggle="modal" data-target="#myModal" aria-expanded="false">
-          <img src="images/fx_1.png" class="fx" />
-        </a>
-        <div class="modal fade" id="myModal" role="dialog">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title content-head">effects</h4>
-              </div>
-              <div class="modal-body">
-                <ul>
-                  <li><a href="#">Delay</a></li>
-                  <li><a href="#">Flanger</a></li>
-                  <li><a href="#">Tremolo</a></li>
-                  <li><a href="#">Distortion</a></li>
-                  <li><a href="#">Reverb</a></li>
-                </ul>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-            <svg aria-hidden="true" height="16" viewBox="0 0 8 16" width="8">
-              <path d="M8 4v1H0V4h8zM0 8h8V7H0v1zm0 3h8v-1H0v1z"></path>
-            </svg>
-          </a>
-          <ul class="dropdown-menu">
-            <li>
-              <input id="load" name="load" type="file" accept="audio/*">
-              <label for="load">Load Sample...</label>
-            </li>
-            <li><a href="#">Select Sample...</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Settings</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Delete Channel</a></li>
-          </ul>
-        </li>
-        <div class="column_0 list-item"></div>
-        <div class="column_1 list-item"></div>
-        <div class="column_2 list-item"></div>
-        <div class="column_3 list-item"></div>
-        <div class="column_4 list-item"></div>
-        <div class="column_5 list-item"></div>
-        <div class="column_6 list-item"></div>
-        <div class="column_7 list-item"></div>
-        <div class="column_8 list-item"></div>
-        <div class="column_9 list-item"></div>
-        <div class="column_10 list-item"></div>
-        <div class="column_11 list-item"></div>
-        <div class="column_12 list-item"></div>
-        <div class="column_13 list-item"></div>
-        <div class="column_14 list-item"></div>
-        <div class="column_15 list-item"></div>
-      </div>
-      <!-- TRACK 4 -->
-      <div class="row" data-instrument="hihat">
-        <form>
-          <label class="checkbox">
-            <input type="checkbox">
-          </label>
-        </form>
-        <a href="#" class="dropdown-toggle" data-toggle="modal" data-target="#myModal" aria-expanded="false">
-          <img src="images/fx_1.png" class="fx" />
-        </a>
-        <div class="modal fade" id="myModal" role="dialog">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title content-head">effects</h4>
-              </div>
-              <div class="modal-body">
-                <ul>
-                  <li><a href="#">Delay</a></li>
-                  <li><a href="#">Flanger</a></li>
-                  <li><a href="#">Tremolo</a></li>
-                  <li><a href="#">Distortion</a></li>
-                  <li><a href="#">Reverb</a></li>
-                </ul>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-            <svg aria-hidden="true" height="16" viewBox="0 0 8 16" width="8">
-              <path d="M8 4v1H0V4h8zM0 8h8V7H0v1zm0 3h8v-1H0v1z"></path>
-            </svg>
-          </a>
-          <ul class="dropdown-menu">
-            <li>
-              <input id="load" name="load" type="file" accept="audio/*">
-              <label for="load">Load Sample...</label>
-            </li>
-            <li><a href="#">Select Sample...</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Settings</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Delete Channel</a></li>
-          </ul>
-        </li>
-        <div class="column_0 list-item"></div>
-        <div class="column_1 list-item"></div>
-        <div class="column_2 list-item"></div>
-        <div class="column_3 list-item"></div>
-        <div class="column_4 list-item"></div>
-        <div class="column_5 list-item"></div>
-        <div class="column_6 list-item"></div>
-        <div class="column_7 list-item"></div>
-        <div class="column_8 list-item"></div>
-        <div class="column_9 list-item"></div>
-        <div class="column_10 list-item"></div>
-        <div class="column_11 list-item"></div>
-        <div class="column_12 list-item"></div>
-        <div class="column_13 list-item"></div>
-        <div class="column_14 list-item"></div>
-        <div class="column_15 list-item"></div>
-      </div>
-      <!-- TRACK 5 -->
-      <div class="row" data-instrument="hihat">
-        <form>
-          <label class="checkbox">
-            <input type="checkbox">
-          </label>
-        </form>
-        <a href="#" class="dropdown-toggle" data-toggle="modal" data-target="#myModal" aria-expanded="false">
-          <img src="images/fx_1.png" class="fx" />
-        </a>
-        <div class="modal fade" id="myModal" role="dialog">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title content-head">effects</h4>
-              </div>
-              <div class="modal-body">
-                <ul>
-                  <li><a href="#">Delay</a></li>
-                  <li><a href="#">Flanger</a></li>
-                  <li><a href="#">Tremolo</a></li>
-                  <li><a href="#">Distortion</a></li>
-                  <li><a href="#">Reverb</a></li>
-                </ul>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-            <svg aria-hidden="true" height="16" viewBox="0 0 8 16" width="8">
-              <path d="M8 4v1H0V4h8zM0 8h8V7H0v1zm0 3h8v-1H0v1z"></path>
-            </svg>
-          </a>
-          <ul class="dropdown-menu">
-            <li>
-              <input id="load" name="load" type="file" accept="audio/*">
-              <label for="load">Load Sample...</label>
-            </li>
-            <li><a href="#">Select Sample...</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Settings</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Delete Channel</a></li>
-          </ul>
-        </li>
-        <div class="column_0 list-item"></div>
-        <div class="column_1 list-item"></div>
-        <div class="column_2 list-item"></div>
-        <div class="column_3 list-item"></div>
-        <div class="column_4 list-item"></div>
-        <div class="column_5 list-item"></div>
-        <div class="column_6 list-item"></div>
-        <div class="column_7 list-item"></div>
-        <div class="column_8 list-item"></div>
-        <div class="column_9 list-item"></div>
-        <div class="column_10 list-item"></div>
-        <div class="column_11 list-item"></div>
-        <div class="column_12 list-item"></div>
-        <div class="column_13 list-item"></div>
-        <div class="column_14 list-item"></div>
-        <div class="column_15 list-item"></div>
-      </div>
-      <!-- TRACK 6 -->
-      <div class="row" data-instrument="hihat">
-        <form>
-          <label class="checkbox">
-            <input type="checkbox">
-          </label>
-        </form>
-        <a href="#" class="dropdown-toggle" data-toggle="modal" data-target="#myModal" aria-expanded="false">
-          <img src="images/fx_1.png" class="fx" />
-        </a>
-        <div class="modal fade" id="myModal" role="dialog">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title content-head">effects</h4>
-              </div>
-              <div class="modal-body">
-                <ul>
-                  <li><a href="#">Delay</a></li>
-                  <li><a href="#">Flanger</a></li>
-                  <li><a href="#">Tremolo</a></li>
-                  <li><a href="#">Distortion</a></li>
-                  <li><a href="#">Reverb</a></li>
-                </ul>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-            <svg aria-hidden="true" height="16" viewBox="0 0 8 16" width="8">
-              <path d="M8 4v1H0V4h8zM0 8h8V7H0v1zm0 3h8v-1H0v1z"></path>
-            </svg>
-          </a>
-          <ul class="dropdown-menu">
-            <li>
-              <input id="load" name="load" type="file" accept="audio/*">
-              <label for="load">Load Sample...</label>
-            </li>
-            <li><a href="#">Select Sample...</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Settings</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Delete Channel</a></li>
-          </ul>
-        </li>
-        <div class="column_0 list-item"></div>
-        <div class="column_1 list-item"></div>
-        <div class="column_2 list-item"></div>
-        <div class="column_3 list-item"></div>
-        <div class="column_4 list-item"></div>
-        <div class="column_5 list-item"></div>
-        <div class="column_6 list-item"></div>
-        <div class="column_7 list-item"></div>
-        <div class="column_8 list-item"></div>
-        <div class="column_9 list-item"></div>
-        <div class="column_10 list-item"></div>
-        <div class="column_11 list-item"></div>
-        <div class="column_12 list-item"></div>
-        <div class="column_13 list-item"></div>
-        <div class="column_14 list-item"></div>
-        <div class="column_15 list-item"></div>
-      </div>
-      <!-- TRACK 7 -->
-      <div class="row" data-instrument="hihat">
-        <form>
-          <label class="checkbox">
-            <input type="checkbox">
-          </label>
-        </form>
-        <a href="#" class="dropdown-toggle" data-toggle="modal" data-target="#myModal" aria-expanded="false">
-          <img src="images/fx_1.png" class="fx" />
-        </a>
-        <div class="modal fade" id="myModal" role="dialog">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title content-head">effects</h4>
-              </div>
-              <div class="modal-body">
-                <ul>
-                  <li><a href="#">Delay</a></li>
-                  <li><a href="#">Flanger</a></li>
-                  <li><a href="#">Tremolo</a></li>
-                  <li><a href="#">Distortion</a></li>
-                  <li><a href="#">Reverb</a></li>
-                </ul>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-            <svg aria-hidden="true" height="16" viewBox="0 0 8 16" width="8">
-              <path d="M8 4v1H0V4h8zM0 8h8V7H0v1zm0 3h8v-1H0v1z"></path>
-            </svg>
-          </a>
-          <ul class="dropdown-menu">
-            <li>
-              <input id="load" name="load" type="file" accept="audio/*">
-              <label for="load">Load Sample...</label>
-            </li>
-            <li><a href="#">Select Sample...</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Settings</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Delete Channel</a></li>
-          </ul>
-        </li>
-        <div class="column_0 list-item"></div>
-        <div class="column_1 list-item"></div>
-        <div class="column_2 list-item"></div>
-        <div class="column_3 list-item"></div>
-        <div class="column_4 list-item"></div>
-        <div class="column_5 list-item"></div>
-        <div class="column_6 list-item"></div>
-        <div class="column_7 list-item"></div>
-        <div class="column_8 list-item"></div>
-        <div class="column_9 list-item"></div>
-        <div class="column_10 list-item"></div>
-        <div class="column_11 list-item"></div>
-        <div class="column_12 list-item"></div>
-        <div class="column_13 list-item"></div>
-        <div class="column_14 list-item"></div>
-        <div class="column_15 list-item"></div>
-      </div>
-      <!-- TRACK 8 -->
-      <div class="row" data-instrument="hihat">
-        <form>
-          <label class="checkbox">
-            <input type="checkbox">
-          </label>
-        </form>
-        <a href="#" class="dropdown-toggle" data-toggle="modal" data-target="#myModal" aria-expanded="false">
-          <img src="images/fx_1.png" class="fx" />
-        </a>
-        <div class="modal fade" id="myModal" role="dialog">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title content-head">effects</h4>
-              </div>
-              <div class="modal-body">
-                <ul>
-                  <li><a href="#">Delay</a></li>
-                  <li><a href="#">Flanger</a></li>
-                  <li><a href="#">Tremolo</a></li>
-                  <li><a href="#">Distortion</a></li>
-                  <li><a href="#">Reverb</a></li>
-                </ul>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-            <svg aria-hidden="true" height="16" viewBox="0 0 8 16" width="8">
-              <path d="M8 4v1H0V4h8zM0 8h8V7H0v1zm0 3h8v-1H0v1z"></path>
-            </svg>
-          </a>
-          <ul class="dropdown-menu">
-            <li>
-              <input id="load" name="load" type="file" accept="audio/*">
-              <label for="load">Load Sample...</label>
-            </li>
-            <li><a href="#">Select Sample...</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Settings</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Delete Channel</a></li>
-          </ul>
-        </li>
-        <div class="column_0 list-item"></div>
-        <div class="column_1 list-item"></div>
-        <div class="column_2 list-item"></div>
-        <div class="column_3 list-item"></div>
-        <div class="column_4 list-item"></div>
-        <div class="column_5 list-item"></div>
-        <div class="column_6 list-item"></div>
-        <div class="column_7 list-item"></div>
-        <div class="column_8 list-item"></div>
-        <div class="column_9 list-item"></div>
-        <div class="column_10 list-item"></div>
-        <div class="column_11 list-item"></div>
-        <div class="column_12 list-item"></div>
-        <div class="column_13 list-item"></div>
-        <div class="column_14 list-item"></div>
-        <div class="column_15 list-item"></div>
-      </div>
+        <!-- end of "body-container div" -->
     </div>
     <!-- ///////////////////////////////////////////////////////////////////////
-                                    SEQUENCER
-     ///////////////////////////////////////////////////////////////////////
-    <h2 class="body-subhead">Sequencer</h2>
-    <!--First tooltip
-    <a href="#" class="tooltip">
-    Tooltip
-    <span>
-        <img class="callout" src="cssttp/callout_black.gif" />
-        <strong>Most Light-weight Tooltip</strong><br />
-        This is the easy-to-use Tooltip driven purely by CSS.
-    </span>
-</a>
-    <!--Second tooltip-->
-    <a href="#" class="tooltip">
-      <!-- <img src="/tooltip/css-tooltip-image.gif" /> -->
-      <span>
-        <!-- <img class="callout" src="cssttp/callout_black.gif" /> -->
-        <!-- <img src="/tooltip/src/tooltips-cd2.jpg" style="float:right;" /> -->
-        <strong>CSS only Tooltip</strong><br />
-        Pure CSS popup tooltips with clean semantic XHTML.
-    </span>
-    </a>
-    <div class="container-fluid">
-      <div class="col-xs-12" id="sequencer">
-        <!-- <div class="row" data-instrument="hihat"> -->
-        <!--  <form>
-                <label class="checkbox">
-                    <input type="checkbox">
-                </label>
-            </form>
-            <a href="#" class="dropdown-toggle" data-toggle="modal" data-target="#myModal" aria-expanded="false">
-                <img src="images/fx_1.png" class="fx" />
-            </a>
-            <div class="modal fade" id="myModal" role="dialog">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                            <h4 class="modal-title">effects</h4>
+                                    BOTTOM PULL UP MENU
+     ///////////////////////////////////////////////////////////////////////-->
+    <div class="content-wrapper">
+        <div class="content">
+            <div class="row">
+                <div class="col-xs-6">
+                    <h2 class="content-head">project settings</h2>
+                </div>
+                <div class="col-xs-6">
+                    <a href="#">
+            <span class="content-head" aria-label="Close Account Info Modal Box" title="Close">&times; &#x274C;</span>
+          </a>
+                </div>
+            </div>
+            <br />
+            <div class="container text-center">
+                <div class="row">
+                    <div class="clearfix">
+                        <div class="col-xs-12 col-md-3 col-md-push-3">
+                            <div class="alert alert-warning alert-dismissable fade in">
+                                <div class="card">
+                                    <img class="card-img-top" data-src="holder.js/100%x180/" alt="Card image cap">
+                                    <div class="card-block">
+                                        <h4 class="card-title">Volume Control</h4>
+                                        <p class="card-text">Yellow number 2</p>
+                                        <a href="#" class="btn btn-primary">Button</a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="modal-body">
-                            <ul>
-                                <li><a href="#">Delay</a></li>
-                                <li><a href="#">Flanger</a></li>
-                                <li><a href="#">Tremolo</a></li>
-                                <li><a href="#">Distortion</a></li>
-                                <li><a href="#">Reverb</a></li>
-                            </ul>
+                        <div class="col-xs-6 col-md-3 col-md-pull-3">
+                            <div>
+                                <div class="card">
+                                    <!-- <img class="card-img-top" alt="USB Input" /> -->
+                                    <div class="card-block">
+                                        <h4 class="card-title">USB Input</h4>
+                                        <!-- <p class="card-text">blue #1</p> -->
+                                        <a href="#">
+                                            <div class="record-button" href="#" title="Click to Record">
+                                                <span></span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <div class="col-xs-6 col-md-3">
+                            <div class="alert alert-danger alert-dismissable fade in">
+                                <div>
+                                    <img class="card-img-top" data-src="holder.js/100%x180/" alt="Card image cap">
+                                    <div class="card-block">
+                                        <h4 class="card-title">EQ</h4>
+                                        <p class="card-text">red #3</p>
+                                        <ul>
+                                            <li class="dropdown">
+                                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Choose<span class="caret"></span></a>
+                                                <ul class="dropdown-menu">
+                                                    <li><a href="#">HiPass</a></li>
+                                                    <li><a href="#">LowPass</a></li>
+                                                    <li><a href="#">Telephone</a></li>
+                                                    <li><a href="#">Mid</a></li>
+                                                    <li role="separator" class="divider"></li>
+                                                    <li><a href="#">Settings</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-md-3">
+                            <div class="alert alert-warning alert-dismissable fade in">
+                                <div class="card">
+                                    <img class="card-img-top" data-src="holder.js/100%x180/" alt="Card image cap">
+                                    <div class="card-block">
+                                        <h4 class="card-title">Effects</h4>
+                                        <p class="card-text">yellow #4</p>
+                                        <ul>
+                                            <li class="dropdown">
+                                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Choose<span class="caret"></span></a>
+                                                <ul class="dropdown-menu">
+                                                    <li><a href="#">Delay</a></li>
+                                                    <li><a href="#">Flanger</a></li>
+                                                    <li><a href="#">Tremolo</a></li>
+                                                    <li><a href="#">Distortion</a></li>
+                                                    <li><a href="#">Reverb</a></li>
+                                                    <li role="separator" class="divider"></li>
+                                                    <li><a href="#">Settings</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                    <svg aria-hidden="true" height="16" viewBox="0 0 8 16" width="8">
-                        <path d="M8 4v1H0V4h8zM0 8h8V7H0v1zm0 3h8v-1H0v1z"></path>
-                    </svg>
-                </a>
-                <ul class="dropdown-menu">
-                    <li><a href="#">Load Sample...</a></li>
-                    <li role="separator" class="divider"></li>
-                    <li><a href="#">Delay</a></li>
-                    <li><a href="#">Flanger</a></li>
-                    <li><a href="#">Tremolo</a></li>
-                    <li><a href="#">Distortion</a></li>
-                    <li><a href="#">Reverb</a></li>
-                    <li role="separator" class="divider"></li>
-                    <li><a href="#">Settings</a></li>
-                    <li role="separator" class="divider"></li>
-                    <li><a href="#">Delete Channel</a></li>
-                </ul>
-            </li>
-            <span class="instrument-label"><strong><input type="text" class="form-control" id="" /></strong></span>
-            <div class="pad column_0"></div>
-            <div class="pad column_1"></div>
-            <div class="pad column_2"></div>
-            <div class="pad column_3"></div>
-            <div class="pad column_4"></div>
-            <div class="pad column_5"></div>
-            <div class="pad column_6"></div>
-            <div class="pad column_7"></div>
-            <div class="pad column_8"></div>
-            <div class="pad column_9"></div>
-            <div class="pad column_10"></div>
-            <div class="pad column_11"></div>
-            <div class="pad column_12"></div>
-            <div class="pad column_13"></div>
-            <div class="pad column_14"></div>
-            <div class="pad column_15"></div> -->
-      </div>
+        </div>
     </div>
-  </div>
-  <div class="content-wrapper">
-    <div class="content">
-      <div class="row">
-        <div class="col-xs-6">
-          <h2 class="content-head">project settings</h2>
-        </div>
-        <div class="col-xs-6">
-          <a href="#">
-            <span class="content-head" aria-label="Close Account Info Modal Box" title="Close">&times; &#x274C;</span>
-          </a>
-        </div>
-      </div>
-      <br />
-      <div class="container text-center">
-        <div class="row">
-          <div class="clearfix">
-            <div class="col-xs-12 col-md-3 col-md-push-3">
-              <div class="alert alert-warning alert-dismissable fade in">
-                <div class="card">
-                  <img class="card-img-top" data-src="holder.js/100%x180/" alt="Card image cap">
-                  <div class="card-block">
-                    <h4 class="card-title">Volume Control</h4>
-                    <p class="card-text">Yellow number 2</p>
-                    <a href="#" class="btn btn-primary">Button</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-xs-6 col-md-3 col-md-pull-3">
-              <div>
-                <div class="card">
-                  <!-- <img class="card-img-top" alt="USB Input" /> -->
-                  <div class="card-block">
-                    <h4 class="card-title">USB Input</h4>
-                    <!-- <p class="card-text">blue #1</p> -->
-                    <a href="#">
-                      <div class="record-button" href="#" title="Click to Record">
-                        <span></span>
-                      </div>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-xs-6 col-md-3">
-              <div class="alert alert-danger alert-dismissable fade in">
-                <div>
-                  <img class="card-img-top" data-src="holder.js/100%x180/" alt="Card image cap">
-                  <div class="card-block">
-                    <h4 class="card-title">EQ</h4>
-                    <p class="card-text">red #3</p>
-                    <ul>
-                      <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Choose<span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                          <li><a href="#">HiPass</a></li>
-                          <li><a href="#">LowPass</a></li>
-                          <li><a href="#">Telephone</a></li>
-                          <li><a href="#">Mid</a></li>
-                          <li role="separator" class="divider"></li>
-                          <li><a href="#">Settings</a></li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-xs-12 col-md-3">
-              <div class="alert alert-warning alert-dismissable fade in">
-                <div class="card">
-                  <img class="card-img-top" data-src="holder.js/100%x180/" alt="Card image cap">
-                  <div class="card-block">
-                    <h4 class="card-title">Effects</h4>
-                    <p class="card-text">yellow #4</p>
-                    <ul>
-                      <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Choose<span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                          <li><a href="#">Delay</a></li>
-                          <li><a href="#">Flanger</a></li>
-                          <li><a href="#">Tremolo</a></li>
-                          <li><a href="#">Distortion</a></li>
-                          <li><a href="#">Reverb</a></li>
-                          <li role="separator" class="divider"></li>
-                          <li><a href="#">Settings</a></li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- </div> -->
-  <!-- ///////////////////////////////////////////////////////////////////////
+    <!-- </div> -->
+    <!-- ///////////////////////////////////////////////////////////////////////
                                     MIDI SAMPLER
      /////////////////////////////////////////////////////////////////////// -->
-  <!-- <h2>MIDI Sampler</h2> -->
-  <!-- ///////////////////////////////////////////////////////////////////////
+    <!-- <h2>MIDI Sampler</h2> -->
+    <!-- ///////////////////////////////////////////////////////////////////////
                                     MIDI OSCILLATOR
      /////////////////////////////////////////////////////////////////////// -->
-  <!-- <h2>MIDI Oscillator</h2> -->
-  <!-- **********************************************************************
+    <!-- <h2>MIDI Oscillator</h2> -->
+    <!-- **********************************************************************
                                     SCRIPT TAGS
       ********************************************************************** -->
-  <script src="lib/node_modules/jquery/dist/jquery.min.js"></script>
-  <script src="lib/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-  <!-- <script src="javascripts/main.js"></script> -->
-  <script src="javascripts/temp.js"></script>
-  <script src="javascripts/sideNav.js"></script>
+    <script src="lib/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="lib/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- <script src="javascripts/main.js"></script> -->
+    <script src="javascripts/temp.js"></script>
+    <script src="javascripts/sideNav.js"></script>
 </body>
 
 </html>

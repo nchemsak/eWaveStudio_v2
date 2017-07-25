@@ -295,6 +295,11 @@ h3 {
   z-index: -1;
 }
 
+// set to inherit, because "hidden" shifts body content
+.modal-open {
+  overflow: inherit;
+}
+
 // ************************************************************************
 // PROJECT SETTINGS - scroll up bottom menu
 // ************************************************************************
@@ -487,13 +492,13 @@ a.tooltip span {
 
 /* Position and style the close button (top right corner) */
 
-.sidenav .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
-}
+// .sidenav .closebtn {
+//   position: absolute;
+//   top: 0;
+//   right: 20px;
+//   margin-left: 50px;
+// }
+
 
 
 /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
