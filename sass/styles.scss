@@ -331,9 +331,16 @@ h3 {
     overflow: inherit;
 }
 
+
+
 // ************************************************************************
 // PROJECT SETTINGS - scroll up bottom menu
 // ************************************************************************
+//
+body > div.content-wrapper > div > div.row {
+  margin-right: 0
+}
+
 .content-wrapper {
     position: absolute;
     top: 100%;
@@ -347,7 +354,7 @@ h3 {
     font-weight: 400;
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    margin: 2em 0 1em;
+    // margin: 2em 0 1em;
 }
 
 .content {

@@ -166,6 +166,9 @@ h3 {
 .modal-open {
   overflow: inherit; }
 
+body > div.content-wrapper > div > div.row {
+  margin-right: 0; }
+
 .content-wrapper {
   position: absolute;
   top: 100%;
@@ -177,8 +180,7 @@ h3 {
 .content-head {
   font-weight: 400;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
-  margin: 2em 0 1em; }
+  letter-spacing: 0.1em; }
 
 .content {
   height: 500px; }
