@@ -80,12 +80,7 @@ input.form-control {
   left: 0;
   bottom: 0;
   right: 0;
-  position: fixed !important;
-  background-image: linear-gradient(top, #b7b29c 0%, #cc89b4 17%, #cc89b4 33%, #40757d 50%, #40757d 66%, #0f5183 83%, #0f5183 100%);
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #b7b29c), color-stop(0.165, #cc89b4), color-stop(0.33, #cc89b4), color-stop(0.495, #40757d), color-stop(0.66, #40757d), color-stop(0.83, #0f5183), color-stop(1, #0f5183));
-  background-image: -moz-linear-gradient(top, #b7b29c 0%, #cc89b4 17%, #cc89b4 33%, #40757d 50%, #40757d 66%, #0f5183 83%, #0f5183 100%);
-  background-image: -o-linear-gradient(top, #b7b29c 0%, #cc89b4 17%, #cc89b4 33%, #40757d 50%, #40757d 66%, #0f5183 83%, #0f5183 100%);
-  background-image: -ms-linear-gradient(top, #b7b29c 0%, #cc89b4 17%, #cc89b4 33%, #40757d 50%, #40757d 66%, #0f5183 83%, #0f5183 100%); }
+  position: fixed !important; }
 
 .body-subhead {
   text-transform: uppercase;
@@ -113,14 +108,11 @@ input.form-control {
       height: 3.5em;
       width: 3.5em; } }
   .list-item:hover {
-    background: #3ee0cf;
+    background: paleturquoise;
     color: #fffcfb;
     transform: scale(1.5);
     box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.3);
     z-index: 100; }
-  .list-item.dark {
-    background-color: rgba(248, 248, 248, 0.6);
-    border: 0px; }
   .list-item.selected {
     background-color: #3ee0cf;
     border: 0px;
@@ -174,7 +166,7 @@ body > div.content-wrapper > div > div.row {
   top: 100%;
   width: 100%;
   min-height: 50%;
-  background-color: silver;
+  background-color: #f2f2f2;
   border-top: 5px solid black; }
 
 .content-head {
@@ -191,9 +183,7 @@ a:hover {
 .record-button:before {
   content: "";
   position: absolute;
-  z-index: 0;
-  left: 10%;
-  bottom: 20%;
+  z-index: 2;
   display: block;
   width: 40px;
   height: 40px;
@@ -205,14 +195,12 @@ a:hover {
   content: "";
   position: absolute;
   z-index: 1;
-  left: 10%;
-  bottom: 20%;
   display: block;
   width: 40px;
   height: 40px;
   background: #fa183d;
   border-radius: 50%;
-  transition: all 200ms; }
+  transition: all 2000ms; }
 
 .record-button:hover:after {
   background-color: #da0528; }

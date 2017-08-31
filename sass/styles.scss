@@ -211,12 +211,11 @@ input.form-control {
     left: 0;
     bottom: 0;
     right: 0;
-    position: fixed !important;
-    background-image: linear-gradient(top, #b7b29c 0%, #cc89b4 17%, #cc89b4 33%, #40757d 50%, #40757d 66%, #0f5183 83%, #0f5183 100%);
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #b7b29c), color-stop(0.165, #cc89b4), color-stop(0.33, #cc89b4), color-stop(0.495, #40757d), color-stop(0.66, #40757d), color-stop(0.83, #0f5183), color-stop(1, #0f5183));
-    background-image: -moz-linear-gradient(top, #b7b29c 0%, #cc89b4 17%, #cc89b4 33%, #40757d 50%, #40757d 66%, #0f5183 83%, #0f5183 100%);
-    background-image: -o-linear-gradient(top, #b7b29c 0%, #cc89b4 17%, #cc89b4 33%, #40757d 50%, #40757d 66%, #0f5183 83%, #0f5183 100%);
-    background-image: -ms-linear-gradient(top, #b7b29c 0%, #cc89b4 17%, #cc89b4 33%, #40757d 50%, #40757d 66%, #0f5183 83%, #0f5183 100%);
+    position: fixed !important; // background-image: linear-gradient(top, #b7b29c 0%, #cc89b4 17%, #cc89b4 33%, #40757d 50%, #40757d 66%, #0f5183 83%, #0f5183 100%);
+    // background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #b7b29c), color-stop(0.165, #cc89b4), color-stop(0.33, #cc89b4), color-stop(0.495, #40757d), color-stop(0.66, #40757d), color-stop(0.83, #0f5183), color-stop(1, #0f5183));
+    // background-image: -moz-linear-gradient(top, #b7b29c 0%, #cc89b4 17%, #cc89b4 33%, #40757d 50%, #40757d 66%, #0f5183 83%, #0f5183 100%);
+    // background-image: -o-linear-gradient(top, #b7b29c 0%, #cc89b4 17%, #cc89b4 33%, #40757d 50%, #40757d 66%, #0f5183 83%, #0f5183 100%);
+    // background-image: -ms-linear-gradient(top, #b7b29c 0%, #cc89b4 17%, #cc89b4 33%, #40757d 50%, #40757d 66%, #0f5183 83%, #0f5183 100%);
 }
 
 .body-subhead {
@@ -247,20 +246,19 @@ input.form-control {
     transition: all .25s linear;
     cursor: pointer;
     &:hover {
-        background: $color-turq;
+        background: $color-turq-light;
         color: #fffcfb;
         transform: scale(1.5);
         box-shadow: 0 8px 6px -6px rgba(0, 0, 0, .3);
         z-index: 100;
     }
     &.dark {
-        background-color: rgba(248, 248, 248, 0.6);
-        border: 0px;
+        // background-color: rgba(248, 248, 248, 0.6);
+        // border: 0px;
     }
 
     &.selected {
         background-color: $color-turq;
-
         border: 0px;
         box-shadow: inset 3px 3px 3px 0px rgba(0, 0, 0, 0.35);
     }
@@ -337,8 +335,8 @@ h3 {
 // PROJECT SETTINGS - scroll up bottom menu
 // ************************************************************************
 //
-body > div.content-wrapper > div > div.row {
-  margin-right: 0
+body>div.content-wrapper>div>div.row {
+    margin-right: 0
 }
 
 .content-wrapper {
@@ -346,15 +344,14 @@ body > div.content-wrapper > div > div.row {
     top: 100%;
     width: 100%;
     min-height: 50%; // z-index: 0;
-    background-color: $color-hover;
+    background-color: $color-background;
     border-top: 5px solid black;
 }
 
 .content-head {
     font-weight: 400;
     text-transform: uppercase;
-    letter-spacing: 0.1em;
-    // margin: 2em 0 1em;
+    letter-spacing: 0.1em; // margin: 2em 0 1em;
 }
 
 .content {
@@ -390,9 +387,8 @@ a:hover {
 .record-button:before {
     content: "";
     position: absolute;
-    z-index: 0;
-    left: 10%;
-    bottom: 20%; // transform: translateX(-50%) translateY(-50%);
+    z-index: 2; // left: 10%;
+    // bottom: 20%; // transform: translateX(-50%) translateY(-50%);
     display: block;
     width: 40px;
     height: 40px;
@@ -404,15 +400,14 @@ a:hover {
 .record-button:after {
     content: "";
     position: absolute;
-    z-index: 1;
-    left: 10%;
-    bottom: 20%; // transform: translateX(-50%) translateY(-50%);
+    z-index: 1; // left: 10%;
+    // bottom: 20%; // transform: translateX(-50%) translateY(-50%);
     display: block;
     width: 40px;
     height: 40px;
     background: #fa183d;
     border-radius: 50%;
-    transition: all 200ms;
+    transition: all 2000ms;
 }
 
 .record-button:hover:after {
@@ -479,6 +474,7 @@ a.tooltip:hover span {
 
 
 
+
 /*CSS3 extras*/
 
 a.tooltip span {
@@ -524,6 +520,7 @@ a.tooltip span {
 
 
 
+
 /* The navigation menu links */
 
 .sidenav a {
@@ -547,12 +544,14 @@ a.tooltip span {
 
 
 
+
 /* When you mouse over the navigation links, change their color */
 
 .sidenav a:hover,
 .offcanvas a:focus {
     color: #f1f1f1;
 }
+
 
 
 
@@ -584,6 +583,7 @@ a.tooltip span {
 .padding {
     padding: 8px 0 0 27px;
 }
+
 
 
 

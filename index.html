@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="canonical" href="https://nchemsak.github.io">
+    <!-- <link rel="canonical" href="https://nchemsak.github.io"> -->
     <meta name="keywords" content="webaudio api sequencer drum machine midi ephemeral wave">
     <meta name="author" content="Nick Chemsak">
     <meta name="description" content="eWave Studio 2 provides users with a web-based audio workstation, drum machine, and audio effects processor.">
@@ -83,10 +83,10 @@
                   </a>
                 </h3>
             </div>
-            <a href="#"><h3>&nbsp;</h3></a>
+            <!-- <a href="#"><h3>&nbsp;</h3></a> -->
             <a href="#"><h3>Sequencer</h3></a>
             <a href="#"><h3>MIDI</h3></a>
-            <a href="#"><h3>User Account</h3></a>
+            <!-- <a href="#"><h3>User Account</h3></a> -->
         </div>
         <!-- ///////////////////////////////////////////////////////////////////////
                                     BODY CONTENT / SEQUENCER
@@ -96,13 +96,234 @@
               <a href="javascript:void(0)" class="closebtn" onclick="openNav()">
                 <i class="fa fa-angle-double-right" aria-hidden="true"></i> eWave studio
               </a>
-
             </h3>
-            <h2 class="body-subhead">Sequencer</h2>
+            <!-- <h2 class="body-subhead">Sequencer</h2> -->
         </div>
         <!-- Add all page content inside this "main" div if you want the side nav to push page content to the right -->
         <div id="main">
             <!-- TRACK 1 -->
+            <div class="container">
+                <div class="row" data-instrument="hihat">
+                    <div class="col-xs-12">
+                        <!-- MUTE TRACK 1 CHECKBOX -->
+                        <form>
+                            <label class="checkbox">
+                                <input type="checkbox">
+                            </label>
+                        </form>
+                    </div>
+                </div>
+                <!-- MODAL TRACK 1 EFFECTS -->
+                <a href="#" class="dropdown-toggle" data-toggle="modal" data-target="#myModal1" aria-expanded="false"><img src="images/fx_1.png" class="fx" /></a>
+                <div class="modal fade" id="myModal1" role="dialog">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title content-head">TRACK 1 - effects</h4>
+                            </div>
+                            <div class="modal-body">
+                                <ul>
+                                    <li><a href="#">Delay</a></li>
+                                    <li><a href="#">Flanger</a></li>
+                                    <li><a href="#">Tremolo</a></li>
+                                    <li><a href="#">Distortion</a></li>
+                                    <li><a href="#">Reverb</a></li>
+                                </ul>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- LOAD SAMPLE 1 DROPDOWN -->
+                <li class="dropdown" id="dropdown1">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-target="dopdown1" aria-expanded="false">
+                        <svg aria-hidden="true" height="16" viewBox="0 0 8 16" width="8">
+                            <path d="M8 4v1H0V4h8zM0 8h8V7H0v1zm0 3h8v-1H0v1z"></path>
+                        </svg>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <input id="load" name="load" type="file" accept="audio/*">
+                            <label for="load">Load Sample - Track 1...</label>
+                        </li>
+                        <li><a href="#">Select Sample...</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">Settings</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">Delete Channel</a></li>
+                    </ul>
+                </li>
+                <!-- SEQUENCER BOXES -->
+                <div class="column_0 list-item dark "></div>
+                <div class="column_1 list-item dark"></div>
+                <div class="column_2 list-item dark"></div>
+                <div class="column_3 list-item dark"></div>
+                <div class="column_4 list-item"></div>
+                <div class="column_5 list-item"></div>
+                <div class="column_6 list-item"></div>
+                <div class="column_7 list-item"></div>
+                <div class="column_8 list-item dark"></div>
+                <div class="column_9 list-item dark"></div>
+                <div class="column_10 list-item dark"></div>
+                <div class="column_11 list-item dark"></div>
+                <div class="column_12 list-item"></div>
+                <div class="column_13 list-item"></div>
+                <div class="column_14 list-item"></div>
+                <div class="column_15 list-item"></div>
+                <!-- div below - END OF TRACK -->
+            </div>
+            <!-- TRACK 2 -->
+            <div class="container">
+                <div class="row" data-instrument="hihat">
+                    <div class="col-xs-12">
+                        <!-- MUTE CHECKBOX -->
+                        <form>
+                            <label class="checkbox">
+                                <input type="checkbox">
+                            </label>
+                        </form>
+                    </div>
+                </div>
+                <!-- MODAL TRACK 2 EFFECTS -->
+                <a href="#" class="dropdown-toggle" data-toggle="modal" data-target="#myModal2" aria-expanded="false"><img src="images/fx_1.png" class="fx" /></a>
+                <div class="modal fade" id="myModal2" role="dialog">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title content-head">TRACK 2 - effects</h4>
+                            </div>
+                            <div class="modal-body">
+                                <ul>
+                                    <li><a href="#">Delay</a></li>
+                                    <li><a href="#">Flanger</a></li>
+                                    <li><a href="#">Tremolo</a></li>
+                                    <li><a href="#">Distortion</a></li>
+                                    <li><a href="#">Reverb</a></li>
+                                </ul>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- LOAD SAMPLE DROPDOWN -->
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                        <svg aria-hidden="true" height="16" viewBox="0 0 8 16" width="8">
+                            <path d="M8 4v1H0V4h8zM0 8h8V7H0v1zm0 3h8v-1H0v1z"></path>
+                        </svg>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <input id="load" name="load" type="file" accept="audio/*">
+                            <label for="load">Load Sample...</label>
+                        </li>
+                        <li><a href="#">Select Sample...</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">Settings</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">Delete Channel</a></li>
+                    </ul>
+                </li>
+                <!-- SEQUENCER BOXES -->
+                <div class="column_0 list-item dark "></div>
+                <div class="column_1 list-item dark"></div>
+                <div class="column_2 list-item dark"></div>
+                <div class="column_3 list-item dark"></div>
+                <div class="column_4 list-item"></div>
+                <div class="column_5 list-item"></div>
+                <div class="column_6 list-item"></div>
+                <div class="column_7 list-item"></div>
+                <div class="column_8 list-item dark"></div>
+                <div class="column_9 list-item dark"></div>
+                <div class="column_10 list-item dark"></div>
+                <div class="column_11 list-item dark"></div>
+                <div class="column_12 list-item"></div>
+                <div class="column_13 list-item"></div>
+                <div class="column_14 list-item"></div>
+                <div class="column_15 list-item"></div>
+                <!-- div below - END OF TRACK -->
+            </div>
+            <!-- TRACK 3 -->
+            <div class="container">
+                <div class="row" data-instrument="hihat">
+                    <div class="col-xs-12">
+                        <!-- MUTE CHECKBOX -->
+                        <form>
+                            <label class="checkbox">
+                                <input type="checkbox">
+                            </label>
+                        </form>
+                    </div>
+                </div>
+                <!-- MODAL TRACK 3 EFFECTS -->
+                <a href="#" class="dropdown-toggle" data-toggle="modal" data-target="#myModal3" aria-expanded="false"><img src="images/fx_1.png" class="fx" /></a>
+                <div class="modal fade" id="myModal3" role="dialog">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title content-head">TRACK 3 - effects</h4>
+                            </div>
+                            <div class="modal-body">
+                                <ul>
+                                    <li><a href="#">Delay</a></li>
+                                    <li><a href="#">Flanger</a></li>
+                                    <li><a href="#">Tremolo</a></li>
+                                    <li><a href="#">Distortion</a></li>
+                                    <li><a href="#">Reverb</a></li>
+                                </ul>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- LOAD SAMPLE DROPDOWN -->
+                <li class="dropdown" id="dropdown3">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-target="#dropdown3" aria-expanded="false">
+                        <svg aria-hidden="true" height="16" viewBox="0 0 8 16" width="8">
+                            <path d="M8 4v1H0V4h8zM0 8h8V7H0v1zm0 3h8v-1H0v1z"></path>
+                        </svg>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <input id="load" name="load" type="file" accept="audio/*">
+                            <label for="load">Load Sample Track 3...</label>
+                        </li>
+                        <li><a href="#">Select Sample...</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">Settings</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">Delete Channel</a></li>
+                    </ul>
+                </li>
+                <!-- SEQUENCER BOXES -->
+                <div class="column_0 list-item dark "></div>
+                <div class="column_1 list-item dark"></div>
+                <div class="column_2 list-item dark"></div>
+                <div class="column_3 list-item dark"></div>
+                <div class="column_4 list-item"></div>
+                <div class="column_5 list-item"></div>
+                <div class="column_6 list-item"></div>
+                <div class="column_7 list-item"></div>
+                <div class="column_8 list-item dark"></div>
+                <div class="column_9 list-item dark"></div>
+                <div class="column_10 list-item dark"></div>
+                <div class="column_11 list-item dark"></div>
+                <div class="column_12 list-item"></div>
+                <div class="column_13 list-item"></div>
+                <div class="column_14 list-item"></div>
+                <div class="column_15 list-item"></div>
+                <!-- div below - END OF TRACK -->
+            </div>
+            <!-- TRACK 4 -->
             <div class="container">
                 <div class="row" data-instrument="hihat">
                     <div class="col-xs-12">
@@ -115,13 +336,309 @@
                     </div>
                 </div>
                 <!-- MODAL TRACK EFFECTS -->
-                <a href="#" class="dropdown-toggle" data-toggle="modal" data-target="#myModal" aria-expanded="false"><img src="images/fx_1.png" class="fx" /></a>
-                <div class="modal fade" id="myModal" role="dialog">
+                <a href="#" class="dropdown-toggle" data-toggle="modal" data-target="#myModal4" aria-expanded="false"><img src="images/fx_1.png" class="fx" /></a>
+                <div class="modal fade" id="myModal4" role="dialog">
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-header">
                                 <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                <h4 class="modal-title content-head">effects</h4>
+                                <h4 class="modal-title content-head">TRACK 4 - effects</h4>
+                            </div>
+                            <div class="modal-body">
+                                <ul>
+                                    <li><a href="#">Delay</a></li>
+                                    <li><a href="#">Flanger</a></li>
+                                    <li><a href="#">Tremolo</a></li>
+                                    <li><a href="#">Distortion</a></li>
+                                    <li><a href="#">Reverb</a></li>
+                                </ul>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- LOAD SAMPLE DROPDOWN -->
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                        <svg aria-hidden="true" height="16" viewBox="0 0 8 16" width="8">
+                            <path d="M8 4v1H0V4h8zM0 8h8V7H0v1zm0 3h8v-1H0v1z"></path>
+                        </svg>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <input id="load" name="load" type="file" accept="audio/*">
+                            <label for="load">Load Sample...</label>
+                        </li>
+                        <li><a href="#">Select Sample...</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">Settings</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">Delete Channel</a></li>
+                    </ul>
+                </li>
+                <!-- SEQUENCER BOXES -->
+                <div class="column_0 list-item dark "></div>
+                <div class="column_1 list-item dark"></div>
+                <div class="column_2 list-item dark"></div>
+                <div class="column_3 list-item dark"></div>
+                <div class="column_4 list-item"></div>
+                <div class="column_5 list-item"></div>
+                <div class="column_6 list-item"></div>
+                <div class="column_7 list-item"></div>
+                <div class="column_8 list-item dark"></div>
+                <div class="column_9 list-item dark"></div>
+                <div class="column_10 list-item dark"></div>
+                <div class="column_11 list-item dark"></div>
+                <div class="column_12 list-item"></div>
+                <div class="column_13 list-item"></div>
+                <div class="column_14 list-item"></div>
+                <div class="column_15 list-item"></div>
+                <!-- div below - END OF TRACK -->
+            </div>
+            <!-- TRACK 5 -->
+            <div class="container">
+                <div class="row" data-instrument="hihat">
+                    <div class="col-xs-12">
+                        <!-- MUTE CHECKBOX -->
+                        <form>
+                            <label class="checkbox">
+                                <input type="checkbox">
+                            </label>
+                        </form>
+                    </div>
+                </div>
+                <!-- MODAL TRACK EFFECTS -->
+                <a href="#" class="dropdown-toggle" data-toggle="modal" data-target="#myModal5" aria-expanded="false"><img src="images/fx_1.png" class="fx" /></a>
+                <div class="modal fade" id="myModal5" role="dialog">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title content-head">TRACK 5 - effects</h4>
+                            </div>
+                            <div class="modal-body">
+                                <ul>
+                                    <li><a href="#">Delay</a></li>
+                                    <li><a href="#">Flanger</a></li>
+                                    <li><a href="#">Tremolo</a></li>
+                                    <li><a href="#">Distortion</a></li>
+                                    <li><a href="#">Reverb</a></li>
+                                </ul>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- LOAD SAMPLE DROPDOWN -->
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                        <svg aria-hidden="true" height="16" viewBox="0 0 8 16" width="8">
+                            <path d="M8 4v1H0V4h8zM0 8h8V7H0v1zm0 3h8v-1H0v1z"></path>
+                        </svg>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <input id="load" name="load" type="file" accept="audio/*">
+                            <label for="load">Load Sample...</label>
+                        </li>
+                        <li><a href="#">Select Sample...</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">Settings</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">Delete Channel</a></li>
+                    </ul>
+                </li>
+                <!-- SEQUENCER BOXES -->
+                <div class="column_0 list-item dark "></div>
+                <div class="column_1 list-item dark"></div>
+                <div class="column_2 list-item dark"></div>
+                <div class="column_3 list-item dark"></div>
+                <div class="column_4 list-item"></div>
+                <div class="column_5 list-item"></div>
+                <div class="column_6 list-item"></div>
+                <div class="column_7 list-item"></div>
+                <div class="column_8 list-item dark"></div>
+                <div class="column_9 list-item dark"></div>
+                <div class="column_10 list-item dark"></div>
+                <div class="column_11 list-item dark"></div>
+                <div class="column_12 list-item"></div>
+                <div class="column_13 list-item"></div>
+                <div class="column_14 list-item"></div>
+                <div class="column_15 list-item"></div>
+                <!-- div below - END OF TRACK -->
+            </div>
+            <!-- TRACK 6 -->
+            <div class="container">
+                <div class="row" data-instrument="hihat">
+                    <div class="col-xs-12">
+                        <!-- MUTE CHECKBOX -->
+                        <form>
+                            <label class="checkbox">
+                                <input type="checkbox">
+                            </label>
+                        </form>
+                    </div>
+                </div>
+                <!-- MODAL TRACK EFFECTS -->
+                <a href="#" class="dropdown-toggle" data-toggle="modal" data-target="#myModal6" aria-expanded="false"><img src="images/fx_1.png" class="fx" /></a>
+                <div class="modal fade" id="myModal6" role="dialog">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title content-head">TRACK 6 - effects</h4>
+                            </div>
+                            <div class="modal-body">
+                                <ul>
+                                    <li><a href="#">Delay</a></li>
+                                    <li><a href="#">Flanger</a></li>
+                                    <li><a href="#">Tremolo</a></li>
+                                    <li><a href="#">Distortion</a></li>
+                                    <li><a href="#">Reverb</a></li>
+                                </ul>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- LOAD SAMPLE DROPDOWN -->
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                        <svg aria-hidden="true" height="16" viewBox="0 0 8 16" width="8">
+                            <path d="M8 4v1H0V4h8zM0 8h8V7H0v1zm0 3h8v-1H0v1z"></path>
+                        </svg>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <input id="load" name="load" type="file" accept="audio/*">
+                            <label for="load">Load Sample...</label>
+                        </li>
+                        <li><a href="#">Select Sample...</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">Settings</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">Delete Channel</a></li>
+                    </ul>
+                </li>
+                <!-- SEQUENCER BOXES -->
+                <div class="column_0 list-item dark "></div>
+                <div class="column_1 list-item dark"></div>
+                <div class="column_2 list-item dark"></div>
+                <div class="column_3 list-item dark"></div>
+                <div class="column_4 list-item"></div>
+                <div class="column_5 list-item"></div>
+                <div class="column_6 list-item"></div>
+                <div class="column_7 list-item"></div>
+                <div class="column_8 list-item dark"></div>
+                <div class="column_9 list-item dark"></div>
+                <div class="column_10 list-item dark"></div>
+                <div class="column_11 list-item dark"></div>
+                <div class="column_12 list-item"></div>
+                <div class="column_13 list-item"></div>
+                <div class="column_14 list-item"></div>
+                <div class="column_15 list-item"></div>
+                <!-- div below - END OF TRACK -->
+            </div>
+            <!-- TRACK 7 -->
+            <div class="container">
+                <div class="row" data-instrument="hihat">
+                    <div class="col-xs-12">
+                        <!-- MUTE CHECKBOX -->
+                        <form>
+                            <label class="checkbox">
+                                <input type="checkbox">
+                            </label>
+                        </form>
+                    </div>
+                </div>
+                <!-- MODAL TRACK EFFECTS -->
+                <a href="#" class="dropdown-toggle" data-toggle="modal" data-target="#myModal7" aria-expanded="false"><img src="images/fx_1.png" class="fx" /></a>
+                <div class="modal fade" id="myModal7" role="dialog">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title content-head">Track 7 - effects</h4>
+                            </div>
+                            <div class="modal-body">
+                                <ul>
+                                    <li><a href="#">Delay</a></li>
+                                    <li><a href="#">Flanger</a></li>
+                                    <li><a href="#">Tremolo</a></li>
+                                    <li><a href="#">Distortion</a></li>
+                                    <li><a href="#">Reverb</a></li>
+                                </ul>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- LOAD SAMPLE DROPDOWN -->
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                        <svg aria-hidden="true" height="16" viewBox="0 0 8 16" width="8">
+                            <path d="M8 4v1H0V4h8zM0 8h8V7H0v1zm0 3h8v-1H0v1z"></path>
+                        </svg>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <input id="load" name="load" type="file" accept="audio/*">
+                            <label for="load">Load Sample...</label>
+                        </li>
+                        <li><a href="#">Select Sample...</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">Settings</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">Delete Channel</a></li>
+                    </ul>
+                </li>
+                <!-- SEQUENCER BOXES -->
+                <div class="column_0 list-item dark "></div>
+                <div class="column_1 list-item dark"></div>
+                <div class="column_2 list-item dark"></div>
+                <div class="column_3 list-item dark"></div>
+                <div class="column_4 list-item"></div>
+                <div class="column_5 list-item"></div>
+                <div class="column_6 list-item"></div>
+                <div class="column_7 list-item"></div>
+                <div class="column_8 list-item dark"></div>
+                <div class="column_9 list-item dark"></div>
+                <div class="column_10 list-item dark"></div>
+                <div class="column_11 list-item dark"></div>
+                <div class="column_12 list-item"></div>
+                <div class="column_13 list-item"></div>
+                <div class="column_14 list-item"></div>
+                <div class="column_15 list-item"></div>
+                <!-- div below - END OF TRACK -->
+            </div>
+            <!-- TRACK 8 -->
+            <div class="container">
+                <div class="row" data-instrument="hihat">
+                    <div class="col-xs-12">
+                        <!-- MUTE CHECKBOX -->
+                        <form>
+                            <label class="checkbox">
+                                <input type="checkbox">
+                            </label>
+                        </form>
+                    </div>
+                </div>
+                <!-- MODAL TRACK EFFECTS -->
+                <a href="#" class="dropdown-toggle" data-toggle="modal" data-target="#myModal8" aria-expanded="false"><img src="images/fx_1.png" class="fx" /></a>
+                <div class="modal fade" id="myModal8" role="dialog">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title content-head">TRACK 8 - effects</h4>
                             </div>
                             <div class="modal-body">
                                 <ul>
@@ -174,8 +691,8 @@
                 <div class="column_13 list-item"></div>
                 <div class="column_14 list-item"></div>
                 <div class="column_15 list-item"></div>
+                <!-- div below - END OF TRACK -->
             </div>
-            <!-- end of "main div" -->
         </div>
         <!-- end of "body-container div" -->
     </div>
@@ -186,7 +703,7 @@
         <div class="content">
             <div class="row">
                 <div class="col-xs-6">
-                    <h2 class="content-head">project settings</h2>
+                    <h2 class="content-head">&nbsp;USB input</h2>
                 </div>
                 <div class="col-xs-6">
                     <a href="#">
@@ -199,24 +716,13 @@
                 <div class="row">
                     <div class="clearfix">
                         <div class="col-xs-12 col-md-3 col-md-push-3">
-                            <div class="alert alert-warning alert-dismissable fade in">
-                                <div class="card">
-                                    <img class="card-img-top" data-src="holder.js/100%x180/" alt="Card image cap">
-                                    <div class="card-block">
-                                        <h4 class="card-title">Volume Control</h4>
-                                        <p class="card-text">Yellow number 2</p>
-                                        <a href="#" class="btn btn-primary">Button</a>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
+                        <!-- FIRST CARD SECTION -->
                         <div class="col-xs-6 col-md-3 col-md-pull-3">
                             <div>
                                 <div class="card">
-                                    <!-- <img class="card-img-top" alt="USB Input" /> -->
                                     <div class="card-block">
-                                        <h4 class="card-title">USB Input</h4>
-                                        <!-- <p class="card-text">blue #1</p> -->
+                                        <h4 class="card-title">&nbsp;</h4>
                                         <a href="#">
                                             <div class="record-button" href="#" title="Click to Record">
                                                 <span></span>
@@ -227,53 +733,8 @@
                             </div>
                         </div>
                         <div class="col-xs-6 col-md-3">
-                            <div class="alert alert-danger alert-dismissable fade in">
-                                <div>
-                                    <img class="card-img-top" data-src="holder.js/100%x180/" alt="Card image cap">
-                                    <div class="card-block">
-                                        <h4 class="card-title">EQ</h4>
-                                        <p class="card-text">red #3</p>
-                                        <ul>
-                                            <li class="dropdown">
-                                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Choose<span class="caret"></span></a>
-                                                <ul class="dropdown-menu">
-                                                    <li><a href="#">HiPass</a></li>
-                                                    <li><a href="#">LowPass</a></li>
-                                                    <li><a href="#">Telephone</a></li>
-                                                    <li><a href="#">Mid</a></li>
-                                                    <li role="separator" class="divider"></li>
-                                                    <li><a href="#">Settings</a></li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                         <div class="col-xs-12 col-md-3">
-                            <div class="alert alert-warning alert-dismissable fade in">
-                                <div class="card">
-                                    <img class="card-img-top" data-src="holder.js/100%x180/" alt="Card image cap">
-                                    <div class="card-block">
-                                        <h4 class="card-title">Effects</h4>
-                                        <p class="card-text">yellow #4</p>
-                                        <ul>
-                                            <li class="dropdown">
-                                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Choose<span class="caret"></span></a>
-                                                <ul class="dropdown-menu">
-                                                    <li><a href="#">Delay</a></li>
-                                                    <li><a href="#">Flanger</a></li>
-                                                    <li><a href="#">Tremolo</a></li>
-                                                    <li><a href="#">Distortion</a></li>
-                                                    <li><a href="#">Reverb</a></li>
-                                                    <li role="separator" class="divider"></li>
-                                                    <li><a href="#">Settings</a></li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
